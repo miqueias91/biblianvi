@@ -1,0 +1,59 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-admob-sdk": {
+      "PLAY_SERVICES_VERSION": "11.0.4",
+      "PACKAGE_NAME": "br.com.innovatesoft.biblianvi"
+    },
+    "cordova-clipboard": {
+      "PACKAGE_NAME": "br.com.innovatesoft.biblianvi"
+    },
+    "cordova-plugin-admob-free": {
+      "ADMOB_APP_ID": "ca-app-pub-7091486462236476~5570299335",
+      "PACKAGE_NAME": "br.com.innovatesoft.biblianvi"
+    },
+    "cordova-plugin-console": {
+      "PACKAGE_NAME": "br.com.innovatesoft.biblianvi"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "br.com.innovatesoft.biblianvi"
+    },
+    "cordova-plugin-insomnia": {
+      "PACKAGE_NAME": "br.com.innovatesoft.biblianvi"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "br.com.innovatesoft.biblianvi"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "br.com.innovatesoft.biblianvi"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "br.com.innovatesoft.biblianvi"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "PACKAGE_NAME": "br.com.innovatesoft.biblianvi"
+    },
+    "cordova-promise-polyfill": {
+      "PACKAGE_NAME": "br.com.innovatesoft.biblianvi"
+    },
+    "cordova-support-google-services": {
+      "PACKAGE_NAME": "br.com.innovatesoft.biblianvi"
+    },
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "br.com.innovatesoft.biblianvi"
+    },
+    "onesignal-cordova-plugin": {
+      "PACKAGE_NAME": "br.com.innovatesoft.biblianvi"
+    },
+    "phonegap-plugin-multidex": {
+      "PACKAGE_NAME": "br.com.innovatesoft.biblianvi"
+    }
+  },
+  "dependent_plugins": {}
+}

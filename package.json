@@ -1,0 +1,58 @@
+{
+    "name": "br.com.innovatesoft.biblianvi",
+    "displayName": "Bíblia Sagrada NVI",
+    "version": "1.0.0",
+    "description": "A Nova Versão Internacional (NVI) é uma das mais recentes traduções da Bíblia. Foi publicada pela Sociedade Bíblica Internacional.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Apache Cordova Team",
+    "license": "Apache-2.0",
+    "dependencies": {
+        "cordova-admob-sdk": "^0.24.1",
+        "cordova-android": "^7.0.0",
+        "cordova-clipboard": "^1.3.0",
+        "cordova-plugin-admob-free": "^0.27.0",
+        "cordova-plugin-console": "^1.1.0",
+        "cordova-plugin-dialogs": "^2.0.2",
+        "cordova-plugin-insomnia": "^4.3.0",
+        "cordova-plugin-splashscreen": "^6.0.0",
+        "cordova-plugin-statusbar": "^2.4.3",
+        "cordova-plugin-whitelist": "^1.3.4",
+        "cordova-plugin-x-socialsharing": "^6.0.3",
+        "cordova-promise-polyfill": "0.0.2",
+        "cordova-support-google-services": "^1.4.1",
+        "cordova.plugins.diagnostic": "^6.0.3",
+        "es6-promise-plugin": "^4.2.2",
+        "onesignal-cordova-plugin": "^2.11.3",
+        "phonegap-plugin-multidex": "^1.0.0",
+        "phonegap-plugin-push": "^2.3.0"
+    },
+    "cordova": {
+        "plugins": {
+            "cordova-plugin-admob-free": {
+                "ADMOB_APP_ID": "ca-app-pub-7091486462236476~5570299335"
+            },
+            "cordova-admob-sdk": {},
+            "cordova-clipboard": {},
+            "cordova-plugin-console": {},
+            "cordova-plugin-dialogs": {},
+            "cordova-plugin-insomnia": {},
+            "cordova-plugin-splashscreen": {},
+            "cordova-plugin-statusbar": {},
+            "cordova-plugin-whitelist": {},
+            "cordova-plugin-x-socialsharing": {},
+            "cordova-promise-polyfill": {},
+            "cordova-support-google-services": {},
+            "cordova.plugins.diagnostic": {},
+            "es6-promise-plugin": {},
+            "onesignal-cordova-plugin": {},
+            "phonegap-plugin-multidex": {},
+            "phonegap-plugin-push": {}
+        },
+        "platforms": [
+            "android"
+        ]
+    }
+}
