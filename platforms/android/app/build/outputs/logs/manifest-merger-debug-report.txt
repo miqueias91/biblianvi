@@ -11,10 +11,10 @@ INJECTED from /var/www/app/android/biblianvi/platforms/android/app/src/main/Andr
 	android:name
 		ADDED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:19:135-183
 manifest
-ADDED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:2:1-37:12
-INJECTED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:2:1-37:12
-INJECTED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:2:1-37:12
-INJECTED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:2:1-37:12
+ADDED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:2:1-38:12
 MERGED from [com.onesignal:OneSignal:3.15.7] /home/miqueias/.gradle/caches/transforms-2/files-2.1/72d9c2919cbc5280e8a99eab55f2f374/jetified-OneSignal-3.15.7/AndroidManifest.xml:2:1-122:12
 MERGED from [com.google.android.gms:play-services-location:15.0.1] /home/miqueias/.gradle/caches/transforms-2/files-2.1/bedbeb91d70b4688c2ae3d2db1500048/jetified-play-services-location-15.0.1/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-messaging:17.3.3] /home/miqueias/.gradle/caches/transforms-2/files-2.1/d132e53bd365b77d15fd6b9f368ed2e6/jetified-firebase-messaging-17.3.3/AndroidManifest.xml:17:1-37:12
@@ -61,9 +61,9 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /home/miqueias/.gradl
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/miqueias/.gradle/caches/transforms-2/files-2.1/ed8cc0ac00b11c0234ef1e5a578c70c1/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/miqueias/.gradle/caches/transforms-2/files-2.1/df4d09f70e3f533a2fede8f96085147c/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/miqueias/.gradle/caches/transforms-2/files-2.1/c16c855844b564ee7204d4d6005470fb/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
-INJECTED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:2:1-37:12
-INJECTED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:2:1-37:12
-INJECTED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:2:1-38:12
 	package
 		ADDED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:2:102-141
 		INJECTED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml
@@ -245,7 +245,7 @@ ADDED from /var/www/app/android/biblianvi/platforms/android/app/src/main/Android
 	android:name
 		ADDED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:28:27-71
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:32:5-79
+ADDED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:33:5-79
 MERGED from [com.onesignal:OneSignal:3.15.7] /home/miqueias/.gradle/caches/transforms-2/files-2.1/72d9c2919cbc5280e8a99eab55f2f374/jetified-OneSignal-3.15.7/AndroidManifest.xml:24:5-79
 MERGED from [com.onesignal:OneSignal:3.15.7] /home/miqueias/.gradle/caches/transforms-2/files-2.1/72d9c2919cbc5280e8a99eab55f2f374/jetified-OneSignal-3.15.7/AndroidManifest.xml:24:5-79
 MERGED from [com.google.firebase:firebase-iid:17.0.3] /home/miqueias/.gradle/caches/transforms-2/files-2.1/6e5b9bf08f21841198c2e1a0a8743ee3/jetified-firebase-iid-17.0.3/AndroidManifest.xml:22:5-79
@@ -253,25 +253,25 @@ MERGED from [com.google.firebase:firebase-iid:17.0.3] /home/miqueias/.gradle/cac
 MERGED from [com.google.android.gms:play-services-ads-lite:15.0.1] /home/miqueias/.gradle/caches/transforms-2/files-2.1/bbb7d5d8abed3a6bb4657b2a03a476d6/jetified-play-services-ads-lite-15.0.1/AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.gms:play-services-ads-lite:15.0.1] /home/miqueias/.gradle/caches/transforms-2/files-2.1/bbb7d5d8abed3a6bb4657b2a03a476d6/jetified-play-services-ads-lite-15.0.1/AndroidManifest.xml:24:5-79
 	android:name
-		ADDED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:32:22-76
+		ADDED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:33:22-76
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:33:5-81
+ADDED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:34:5-81
 	android:name
-		ADDED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:33:22-78
+		ADDED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:34:22-78
 uses-permission#com.amazon.device.messaging.permission.RECEIVE
-ADDED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:34:5-86
+ADDED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:35:5-86
 	android:name
-		ADDED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:34:22-83
+		ADDED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:35:22-83
 permission#br.com.innovatesoft.biblianvi.permission.RECEIVE_ADM_MESSAGE
-ADDED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:35:5-131
+ADDED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:36:5-131
 	android:protectionLevel
-		ADDED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:35:93-128
+		ADDED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:36:93-128
 	android:name
-		ADDED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:35:17-92
+		ADDED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:36:17-92
 uses-permission#br.com.innovatesoft.biblianvi.permission.RECEIVE_ADM_MESSAGE
-ADDED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:36:5-100
+ADDED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:37:5-100
 	android:name
-		ADDED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:36:22-97
+		ADDED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:37:22-97
 uses-sdk
 INJECTED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml
@@ -695,6 +695,6 @@ ADDED from [com.google.android.gms:play-services-basement:16.0.1] /home/miqueias
 	android:name
 		ADDED from [com.google.android.gms:play-services-basement:16.0.1] /home/miqueias/.gradle/caches/transforms-2/files-2.1/0b7388f3e203c36577d2702cd32afbce/jetified-play-services-basement-16.0.1/AndroidManifest.xml:24:13-58
 uses-permission#android.permission.READ_PHONE_STATE
-IMPLIED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:2:1-37:12 reason: org.apache.cordova has a targetSdkVersion < 4
+IMPLIED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:2:1-38:12 reason: org.apache.cordova has a targetSdkVersion < 4
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-IMPLIED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:2:1-37:12 reason: org.apache.cordova requested WRITE_EXTERNAL_STORAGE
+IMPLIED from /var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:2:1-38:12 reason: org.apache.cordova requested WRITE_EXTERNAL_STORAGE

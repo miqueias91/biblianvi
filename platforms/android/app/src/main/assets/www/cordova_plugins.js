@@ -109,8 +109,7 @@ module.exports.metadata =
   "cordova-plugin-x-socialsharing": "6.0.3",
   "cordova-support-google-services": "1.4.1",
   "onesignal-cordova-plugin": "2.11.3",
-  "phonegap-plugin-multidex": "1.0.0",
-  "cordova-android-support-gradle-release": "3.0.1"
+  "phonegap-plugin-multidex": "1.0.0"
 };
 // BOTTOM OF METADATA
 });

@@ -29,7 +29,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.0.0'
+        classpath 'com.android.tools.build:gradle:4.1.2'
     }
 }
 
@@ -94,7 +94,6 @@ ext {
 apply from: "../cordova-support-google-services/biblianvi-build.gradle"
 apply from: "../onesignal-cordova-plugin/biblianvi-build-extras-onesignal.gradle"
 apply from: "../phonegap-plugin-multidex/biblianvi-multidex.gradle"
-apply from: "../cordova-android-support-gradle-release/biblianvi-cordova-android-support-gradle-release.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras = file('build-extras.gradle').exists()
@@ -167,8 +166,8 @@ android {
     defaultConfig {
         versionCode cdvVersionCode ?: new BigInteger("" + privateHelpers.extractIntFromManifest("versionCode"))
         applicationId privateHelpers.extractStringFromManifest("package")
-        minSdkVersion 19
         targetSdkVersion 29
+        minSdkVersion 19
 
         if (cdvMinSdkVersion != null) {
             minSdkVersion cdvMinSdkVersion
