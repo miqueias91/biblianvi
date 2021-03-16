@@ -21,6 +21,12 @@ static NSString*const LOG_TAG = @"Diagnostic_Bluetooth[native]";
     [super pluginInitialize];
 
     diagnostic = [Diagnostic getInstance];
+
+    self.bluetoothManager = [[CBCentralManager alloc]
+                             initWithDelegate:self
+                             queue:dispatch_get_main_queue()
+                             options:@{CBCentralManagerOptionShowPowerAlertKey: @(NO)}];
+    [self centralManagerDidUpdateState:self.bluetoothManager]; // Show initial state
 }
 
 /********************************/
@@ -72,7 +78,6 @@ static NSString*const LOG_TAG = @"Diagnostic_Bluetooth[native]";
                  When the application requests to start scanning for bluetooth devices that is when the user is presented with a consent dialog.
                  */
                 [diagnostic logDebug:@"Requesting bluetooth authorization"];
-                [self ensureBluetoothManager];
                 [self.bluetoothManager scanForPeripheralsWithServices:nil options:nil];
                 [self.bluetoothManager stopScan];
             }else{
@@ -86,20 +91,6 @@ static NSString*const LOG_TAG = @"Diagnostic_Bluetooth[native]";
     }];
 }
 
-- (void) ensureBluetoothManager: (CDVInvokedUrlCommand*)command
-{
-    [self.commandDelegate runInBackground:^{
-        @try {
-            [self ensureBluetoothManager];
-            [diagnostic sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_OK] :command];
-        }
-        @catch (NSException *exception) {
-            [diagnostic handlePluginException:exception :command];
-        }
-    }];
-
-}
-
 /********************************/
 #pragma mark - Internals
 /********************************/
@@ -108,31 +99,50 @@ static NSString*const LOG_TAG = @"Diagnostic_Bluetooth[native]";
     NSString* state;
     NSString* description;
 
-    [self ensureBluetoothManager];
     switch(self.bluetoothManager.state)
     {
 
+#if defined(__IPHONE_10_0) && __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_10_0
         case CBManagerStateResetting:
+#else
+        case CBCentralManagerStateResetting:
+#endif
             state = @"resetting";
             description =@"The connection with the system service was momentarily lost, update imminent.";
             break;
 
+#if defined(__IPHONE_10_0) && __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_10_0
         case CBManagerStateUnsupported:
+#else
+        case CBCentralManagerStateUnsupported:
+#endif
             state = @"unsupported";
             description = @"The platform doesn't support Bluetooth Low Energy.";
             break;
 
+#if defined(__IPHONE_10_0) && __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_10_0
         case CBManagerStateUnauthorized:
+#else
+        case CBCentralManagerStateUnauthorized:
+#endif
             state = @"unauthorized";
             description = @"The app is not authorized to use Bluetooth Low Energy.";
             break;
 
+#if defined(__IPHONE_10_0) && __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_10_0
         case CBManagerStatePoweredOff:
+#else
+        case CBCentralManagerStatePoweredOff:
+#endif
             state = @"powered_off";
             description = @"Bluetooth is currently powered off.";
             break;
 
+#if defined(__IPHONE_10_0) && __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_10_0
         case CBManagerStatePoweredOn:
+#else
+        case CBCentralManagerStatePoweredOn:
+#endif
             state = @"powered_on";
             description = @"Bluetooth is currently powered on and available to use.";
             break;
@@ -145,16 +155,6 @@ static NSString*const LOG_TAG = @"Diagnostic_Bluetooth[native]";
 
 
     return state;
-}
-
-- (void) ensureBluetoothManager {
-    if(![self.bluetoothManager isKindOfClass:[CBCentralManager class]]){
-        self.bluetoothManager = [[CBCentralManager alloc]
-                                 initWithDelegate:self
-                                 queue:dispatch_get_main_queue()
-                                 options:@{CBCentralManagerOptionShowPowerAlertKey: @(NO)}];
-        [self centralManagerDidUpdateState:self.bluetoothManager]; // Send initial state
-    }
 }
 
 /********************************/

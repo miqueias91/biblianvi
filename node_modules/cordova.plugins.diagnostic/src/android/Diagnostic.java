@@ -54,7 +54,7 @@ import android.content.pm.PackageManager;
 import android.provider.Settings;
 
 
-import androidx.core.app.ActivityCompat;
+import android.support.v4.app.ActivityCompat;
 
 /**
  * Diagnostic plugin implementation for Android
@@ -87,8 +87,6 @@ public class Diagnostic extends CordovaPlugin{
         Diagnostic.addBiDirMapEntry(_permissionsMap, "GET_ACCOUNTS", Manifest.permission.GET_ACCOUNTS);
         Diagnostic.addBiDirMapEntry(_permissionsMap, "ACCESS_FINE_LOCATION", Manifest.permission.ACCESS_FINE_LOCATION);
         Diagnostic.addBiDirMapEntry(_permissionsMap, "ACCESS_COARSE_LOCATION", Manifest.permission.ACCESS_COARSE_LOCATION);
-        // Add as string as Manifest.permission.ACCESS_BACKGROUND_LOCATION not defined in < API 29:
-        Diagnostic.addBiDirMapEntry(_permissionsMap, "ACCESS_BACKGROUND_LOCATION", "android.permission.ACCESS_BACKGROUND_LOCATION");
         Diagnostic.addBiDirMapEntry(_permissionsMap, "RECORD_AUDIO", Manifest.permission.RECORD_AUDIO);
         Diagnostic.addBiDirMapEntry(_permissionsMap, "READ_PHONE_STATE", Manifest.permission.READ_PHONE_STATE);
         Diagnostic.addBiDirMapEntry(_permissionsMap, "CALL_PHONE", Manifest.permission.CALL_PHONE);
@@ -128,7 +126,7 @@ public class Diagnostic extends CordovaPlugin{
     /**
      * User denied permission (without checking "never ask again")
      */
-    protected static final String STATUS_DENIED_ONCE = "DENIED_ONCE";
+    protected static final String STATUS_DENIED = "DENIED";
 
     /**
      * User denied permission and checked "never ask again"
@@ -491,10 +489,6 @@ public class Diagnostic extends CordovaPlugin{
             if(!permissionsMap.containsKey(permission)){
                 throw new Exception("Permission name '"+permission+"' is not a valid permission");
             }
-            if(Build.VERSION.SDK_INT < 29 && permission.equals("ACCESS_BACKGROUND_LOCATION")){
-                // This version of Android doesn't support background location permission so check for standard coarse location permission
-                permission = "ACCESS_COARSE_LOCATION";
-            }
             String androidPermission = permissionsMap.get(permission);
             Log.v(TAG, "Get authorisation status for "+androidPermission);
             boolean granted = hasPermission(androidPermission);
@@ -509,7 +503,7 @@ public class Diagnostic extends CordovaPlugin{
                         statuses.put(permission, Diagnostic.STATUS_NOT_REQUESTED);
                     }
                 }else{
-                    statuses.put(permission, Diagnostic.STATUS_DENIED_ONCE);
+                    statuses.put(permission, Diagnostic.STATUS_DENIED);
                 }
             }
         }
@@ -552,12 +546,8 @@ public class Diagnostic extends CordovaPlugin{
     }
 
     protected int storeContextByRequestId(){
-        return storeContextByRequestId(currentContext);
-    }
-
-    protected int storeContextByRequestId(CallbackContext callbackContext){
         String requestId = generateRandomRequestId();
-        callbackContexts.put(requestId, callbackContext);
+        callbackContexts.put(requestId, currentContext);
         permissionStatuses.put(requestId, new JSONObject());
         return Integer.valueOf(requestId);
     }
@@ -650,7 +640,7 @@ public class Diagnostic extends CordovaPlugin{
             Boolean bool = (Boolean) method.invoke(null, activity, permission);
             shouldShow = bool.booleanValue();
         } catch (NoSuchMethodException e) {
-            throw new Exception("shouldShowRequestPermissionRationale() method not found in ActivityCompat class.");
+            throw new Exception("shouldShowRequestPermissionRationale() method not found in ActivityCompat class. Check you have Android Support Library v23+ installed");
         }
         return shouldShow;
     }
@@ -799,10 +789,6 @@ public class Diagnostic extends CordovaPlugin{
             for (int i = 0, len = permissions.length; i < len; i++) {
                 String androidPermission = permissions[i];
                 String permission = permissionsMap.get(androidPermission);
-                if(Build.VERSION.SDK_INT < 29 && permission.equals("ACCESS_BACKGROUND_LOCATION")){
-                    // This version of Android doesn't support background location permission so use standard coarse location permission
-                    permission = "ACCESS_COARSE_LOCATION";
-                }
                 String status;
                 if (grantResults[i] == PackageManager.PERMISSION_DENIED) {
                     boolean showRationale = shouldShowRequestPermissionRationale(this.cordova.getActivity(), androidPermission);
@@ -816,7 +802,7 @@ public class Diagnostic extends CordovaPlugin{
                         }
                     } else {
                         // user denied WITHOUT "never ask again"
-                        status = Diagnostic.STATUS_DENIED_ONCE;
+                        status = Diagnostic.STATUS_DENIED;
                     }
                 } else {
                     // Permission granted

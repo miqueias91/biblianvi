@@ -22,7 +22,7 @@ var Diagnostic = (function(){
      */
     Diagnostic.permissionStatus = {
         "NOT_REQUESTED": "not_determined", // App has not yet requested this permission
-        "DENIED_ALWAYS": "denied_always", // User denied access to this permission
+        "DENIED": "denied", // User denied access to this permission
         "RESTRICTED": "restricted", // Permission is unavailable and user cannot enable it.  For example, when parental controls are in effect for the current user.
         "GRANTED": "authorized", //  User granted access to this permission
         "GRANTED_WHEN_IN_USE": "authorized_when_in_use" //  User granted access use location permission only when app is in use
@@ -79,6 +79,7 @@ var Diagnostic = (function(){
      * @param {Function} successCallback - The callback which will be called when switch to settings is successful.
      * @param {Function} errorCallback - The callback which will be called when switch to settings encounters an error.
      * This callback function is passed a single string parameter containing the error message.
+     * This works only on iOS 8+. iOS 7 and below will invoke the errorCallback.
      */
     Diagnostic.switchToSettings = function(successCallback, errorCallback) {
         return cordova.exec(successCallback,
@@ -197,7 +198,7 @@ var Diagnostic = (function(){
      * This callback function is passed a single string parameter which indicates the location authorization status as a constant in `cordova.plugins.diagnostic.permissionStatus`.
      * Possible values are:
      * `cordova.plugins.diagnostic.permissionStatus.NOT_REQUESTED`
-     * `cordova.plugins.diagnostic.permissionStatus.DENIED_ALWAYS`
+     * `cordova.plugins.diagnostic.permissionStatus.DENIED`
      * `cordova.plugins.diagnostic.permissionStatus.GRANTED`
      * `cordova.plugins.diagnostic.permissionStatus.GRANTED_WHEN_IN_USE`
      * Note that `GRANTED` indicates the app is always granted permission (even when in background).
@@ -213,25 +214,6 @@ var Diagnostic = (function(){
     };
 
     /**
-     * Returns the location accuracy authorization for the application.
-     *
-     * @param {Function} successCallback - The callback which will be called when operation is successful.
-     * This callback function is passed a single string parameter which indicates the location accuracy authorization as a constant in `cordova.plugins.diagnostic.locationAccuracyAuthorization`.
-     * Possible values are:
-     * `cordova.plugins.diagnostic.locationAccuracyAuthorization.FULL`
-     * `cordova.plugins.diagnostic.locationAccuracyAuthorization.REDUCED`
-     * @param {Function} errorCallback -  The callback which will be called when operation encounters an error.
-     * This callback function is passed a single string parameter containing the error message.
-     */
-    Diagnostic.getLocationAccuracyAuthorization = function(successCallback, errorCallback) {
-        if(cordova.plugins.diagnostic.location){
-            cordova.plugins.diagnostic.location.getLocationAccuracyAuthorization.apply(this, arguments);
-        }else{
-            throw "Diagnostic Location module is not installed";
-        }
-    };
-
-    /**
      * Requests location authorization for the application.
      * Authorization can be requested to use location either "when in use" (only in foreground) or "always" (foreground and background).
      * Should only be called if authorization status is NOT_REQUESTED. Calling it when in any other state will have no effect.
@@ -239,7 +221,7 @@ var Diagnostic = (function(){
      * @param {Function} successCallback - Invoked in response to the user's choice in the permission dialog.
      * It is passed a single string parameter which defines the resulting authorisation status as a constant in `cordova.plugins.diagnostic.permissionStatus`.
      * Possible values are:
-     * `cordova.plugins.diagnostic.permissionStatus.DENIED_ALWAYS`
+     * `cordova.plugins.diagnostic.permissionStatus.DENIED`
      * `cordova.plugins.diagnostic.permissionStatus.GRANTED`
      * `cordova.plugins.diagnostic.permissionStatus.GRANTED_WHEN_IN_USE`
      * @param {Function} errorCallback -  The callback which will be called when operation encounters an error.
@@ -250,31 +232,6 @@ var Diagnostic = (function(){
     Diagnostic.requestLocationAuthorization = function(successCallback, errorCallback, mode) {
         if(cordova.plugins.diagnostic.location){
             cordova.plugins.diagnostic.location.requestLocationAuthorization.apply(this, arguments);
-        }else{
-            throw "Diagnostic Location module is not installed";
-        }
-    };
-
-    /**
-     * Requests temporary access to full location accuracy for the application.
-     * By default on iOS 14+, when a user grants location permission, the app can only receive reduced accuracy locations.
-     * If your app requires full (high-accuracy GPS) locations (e.g. a SatNav app), you need to call this method.
-     * Should only be called if location authorization has been granted.
-     *
-     * @param {String} purpose - (required) corresponds to a key in the NSLocationTemporaryUsageDescriptionDictionary entry in your app's `*-Info.plist`
-     * which contains a message explaining the user why your app needs their exact location.
-     * This will be presented to the user via permission dialog in which they can either accept or reject the request.
-     * @param {Function} successCallback - (optional) Invoked in response to the user's choice in the permission dialog.
-     * It is passed a single string parameter which defines the resulting accuracy authorization as a constant in `cordova.plugins.diagnostic.locationAccuracyAuthorization`.
-     * Possible values are:
-     * `cordova.plugins.diagnostic.locationAccuracyAuthorization.FULL`
-     * `cordova.plugins.diagnostic.locationAccuracyAuthorization.REDUCED`
-     * @param {Function} errorCallback -  (optional) The callback which will be called when operation encounters an error.
-     * This callback function is passed a single string parameter containing the error message.
-     */
-    Diagnostic.requestTemporaryFullAccuracyAuthorization = function(purpose, successCallback, errorCallback) {
-        if(cordova.plugins.diagnostic.location){
-            cordova.plugins.diagnostic.location.requestTemporaryFullAccuracyAuthorization.apply(this, arguments);
         }else{
             throw "Diagnostic Location module is not installed";
         }
@@ -294,24 +251,6 @@ var Diagnostic = (function(){
     Diagnostic.registerLocationStateChangeHandler = function(successCallback) {
         if(cordova.plugins.diagnostic.location){
             cordova.plugins.diagnostic.location.registerLocationStateChangeHandler.apply(this, arguments);
-        }else{
-            throw "Diagnostic Location module is not installed";
-        }
-    };
-
-    /**
-     * Registers a function to be called when a change in location accuracy authorization occurs.
-     * This occurs when location accuracy authorization is changed.
-     * This can be triggered either by the user's response to a location accuracy authorization dialog,
-     * or by the user changing the location accuracy authorization specifically for your app in Settings.
-     * Pass in a falsey value to de-register the currently registered function.
-     *
-     * @param {Function} successCallback -  The callback which will be called when the location accuracy authorization changes.
-     * This callback function is passed a single string parameter indicating the new location accuracy authorization as a constant in `cordova.plugins.diagnostic.locationAccuracyAuthorization`.
-     */
-    Diagnostic.registerLocationAccuracyAuthorizationChangeHandler = function(successCallback) {
-        if(cordova.plugins.diagnostic.location){
-            cordova.plugins.diagnostic.location.registerLocationAccuracyAuthorizationChangeHandler.apply(this, arguments);
         }else{
             throw "Diagnostic Location module is not installed";
         }
@@ -397,7 +336,7 @@ var Diagnostic = (function(){
      * @param {Object} params - (optional) parameters:
      * - {Function} successCallback - The callback which will be called when operation is successful.
      * This callback function is passed a single string parameter indicating whether access to the camera was granted or denied:
-     * `cordova.plugins.diagnostic.permissionStatus.GRANTED` or `cordova.plugins.diagnostic.permissionStatus.DENIED_ALWAYS`
+     * `cordova.plugins.diagnostic.permissionStatus.GRANTED` or `cordova.plugins.diagnostic.permissionStatus.DENIED`
      * - {Function} errorCallback -  The callback which will be called when operation encounters an error.
      * This callback function is passed a single string parameter containing the error message.
      */
@@ -447,7 +386,7 @@ var Diagnostic = (function(){
      *
      * @param {Function} successCallback - The callback which will be called when operation is successful.
      * This callback function is passed a single string parameter indicating the new authorization status:
-     * `cordova.plugins.diagnostic.permissionStatus.GRANTED` or `cordova.plugins.diagnostic.permissionStatus.DENIED_ALWAYS`
+     * `cordova.plugins.diagnostic.permissionStatus.GRANTED` or `cordova.plugins.diagnostic.permissionStatus.DENIED`
      * @param {Function} errorCallback -  The callback which will be called when operation encounters an error.
      * This callback function is passed a single string parameter containing the error message.
      */
@@ -572,7 +511,8 @@ var Diagnostic = (function(){
 
     /**
      * Checks if remote (push) notifications are enabled.
-     * Returns true if app is registered for remote notifications AND "Allow Notifications" switch is ON AND alert style is not set to "None" (i.e. "Banners" or "Alerts").
+     * On iOS 8+, returns true if app is registered for remote notifications AND "Allow Notifications" switch is ON AND alert style is not set to "None" (i.e. "Banners" or "Alerts").
+     * On iOS <=7, returns true if app is registered for remote notifications AND alert style is not set to "None" (i.e. "Banners" or "Alerts") - same as isRegisteredForRemoteNotifications().
      *
      * @param {Function} successCallback - The callback which will be called when operation is successful.
      * This callback function is passed a single boolean parameter which is TRUE if remote (push) notifications are enabled.
@@ -589,7 +529,7 @@ var Diagnostic = (function(){
 
     /**
      * Indicates the current setting of notification types for the app in the Settings app.
-     * Note: if "Allow Notifications" switch is OFF, all types will be returned as disabled.
+     * Note: on iOS 8+, if "Allow Notifications" switch is OFF, all types will be returned as disabled.
      *
      * @param {Function} successCallback - The callback which will be called when operation is successful.
      * This callback function is passed a single object parameter where the key is the notification type as a constant in `cordova.plugins.diagnostic.remoteNotificationType` and the value is a boolean indicating whether it's enabled:
@@ -609,9 +549,10 @@ var Diagnostic = (function(){
 
     /**
      * Indicates if the app is registered for remote notifications on the device.
-     * Returns true if the app is registered for remote notifications and received its device token,
+     * On iOS 8+, returns true if the app is registered for remote notifications and received its device token,
      * or false if registration has not occurred, has failed, or has been denied by the user.
      * Note that user preferences for notifications in the Settings app will not affect this.
+     * On iOS <=7, returns true if app is registered for remote notifications AND alert style is not set to "None" (i.e. "Banners" or "Alerts") - same as isRemoteNotificationsEnabled().
      *
      * @param {Function} successCallback - The callback which will be called when operation is successful.
      * This callback function is passed a single boolean parameter which is TRUE if the device is registered for remote (push) notifications.
@@ -628,13 +569,14 @@ var Diagnostic = (function(){
 
     /**
      * Returns the remote notifications authorization status for the application.
+     * Works on iOS 10+ (iOS 9 and below will invoke the error callback).
      *
      * @param {Object} params - (optional) parameters:
      *  - {Function} successCallback - The callback which will be called when operation is successful.
      * This callback function is passed a single string parameter which indicates the authorization status as a constant in `cordova.plugins.diagnostic.permissionStatus`.
      * Possible values are:
      * `cordova.plugins.diagnostic.permissionStatus.NOT_REQUESTED`
-     * `cordova.plugins.diagnostic.permissionStatus.DENIED_ALWAYS`
+     * `cordova.plugins.diagnostic.permissionStatus.DENIED`
      * `cordova.plugins.diagnostic.permissionStatus.GRANTED`
      *  - {Function} errorCallback -  The callback which will be called when operation encounters an error.
      * This callback function is passed a single string parameter containing the error message.
@@ -649,6 +591,7 @@ var Diagnostic = (function(){
 
     /**
      * Requests remote notifications authorization for the application.
+     * Works on iOS 8+ (iOS 8 and below will invoke the error callback).
      *
      * @param {Object} params - (optional) parameters:
      *  - {Function} successCallback - The callback which will be called when operation is successful.
@@ -658,6 +601,7 @@ var Diagnostic = (function(){
      * If not specified, defaults to all notification types.
      * @param {Boolean} omitRegistration - If true, registration for remote notifications will not be carried out once remote notifications authorization is granted.
      * Defaults to false (registration will automatically take place once authorization is granted).
+     * iOS 10+ only: on iOS 8 & 9 authorization and registration are implicitly inseparable so both will be carried out.
      */
     Diagnostic.requestRemoteNotificationsAuthorization = function() {
         if(cordova.plugins.diagnostic.notifications){
@@ -708,9 +652,10 @@ var Diagnostic = (function(){
      *
      * @param {Function} successCallback - The callback which will be called when operation is successful.
      * This callback function is passed a single string parameter indicating whether access to the microphone was granted or denied:
-     * `cordova.plugins.diagnostic.permissionStatus.GRANTED` or `cordova.plugins.diagnostic.permissionStatus.DENIED_ALWAYS`
+     * `cordova.plugins.diagnostic.permissionStatus.GRANTED` or `cordova.plugins.diagnostic.permissionStatus.DENIED`
      * @param {Function} errorCallback - The callback which will be called when an error occurs.
      * This callback function is passed a single string parameter containing the error message.
+     * This works only on iOS 7+.
      */
     Diagnostic.requestMicrophoneAuthorization = function(successCallback, errorCallback) {
         if(cordova.plugins.diagnostic.microphone){
@@ -763,7 +708,7 @@ var Diagnostic = (function(){
      *
      * @param {Function} successCallback - The callback which will be called when operation is successful.
      * This callback function is passed a single string parameter indicating whether access to contacts was granted or denied:
-     * `cordova.plugins.diagnostic.permissionStatus.GRANTED` or `cordova.plugins.diagnostic.permissionStatus.DENIED_ALWAYS`
+     * `cordova.plugins.diagnostic.permissionStatus.GRANTED` or `cordova.plugins.diagnostic.permissionStatus.DENIED`
      * @param {Function} errorCallback -  The callback which will be called when operation encounters an error.
      * This callback function is passed a single string parameter containing the error message.
      */
@@ -817,7 +762,7 @@ var Diagnostic = (function(){
      *
      * @param {Function} successCallback - The callback which will be called when operation is successful.
      * This callback function is passed a single string parameter indicating whether access to calendar was granted or denied:
-     * `cordova.plugins.diagnostic.permissionStatus.GRANTED` or `cordova.plugins.diagnostic.permissionStatus.DENIED_ALWAYS`
+     * `cordova.plugins.diagnostic.permissionStatus.GRANTED` or `cordova.plugins.diagnostic.permissionStatus.DENIED`
      * @param {Function} errorCallback -  The callback which will be called when operation encounters an error.
      * This callback function is passed a single string parameter containing the error message.
      */
@@ -871,7 +816,7 @@ var Diagnostic = (function(){
      *
      * @param {Function} successCallback - The callback which will be called when operation is successful.
      * This callback function is passed a single string parameter indicating whether access to reminders was granted or denied:
-     * `cordova.plugins.diagnostic.permissionStatus.GRANTED` or `cordova.plugins.diagnostic.permissionStatus.DENIED_ALWAYS`
+     * `cordova.plugins.diagnostic.permissionStatus.GRANTED` or `cordova.plugins.diagnostic.permissionStatus.DENIED`
      * @param {Function} errorCallback -  The callback which will be called when operation encounters an error.
      * This callback function is passed a single string parameter containing the error message.
      */
@@ -938,7 +883,7 @@ var Diagnostic = (function(){
      * @param {Function} successCallback - The callback which will be called when operation is successful.
      * This callback function is passed a single string parameter indicating the result:
      * - `cordova.plugins.diagnostic.motionStatus.GRANTED` - user granted motion authorization.
-     * - `cordova.plugins.diagnostic.motionStatus.DENIED_ALWAYS` - user denied authorization.
+     * - `cordova.plugins.diagnostic.motionStatus.DENIED` - user denied authorization.
      * - `cordova.plugins.diagnostic.motionStatus.RESTRICTED` - user cannot grant motion authorization.
      * - `cordova.plugins.diagnostic.motionStatus.NOT_AVAILABLE` - device does not support Motion Tracking.
      * Motion tracking is supported by iOS devices with an M7 co-processor (or above): that is iPhone 5s (or above), iPad Air (or above), iPad Mini 2 (or above).
@@ -966,7 +911,7 @@ var Diagnostic = (function(){
      * This callback function is passed a single string parameter indicating the result:
     * - `cordova.plugins.diagnostic.motionStatus.NOT_REQUESTED` - App has not yet requested this permission.
     * - `cordova.plugins.diagnostic.motionStatus.GRANTED` - user granted motion authorization.
-    * - `cordova.plugins.diagnostic.motionStatus.DENIED_ALWAYS` - user denied authorization.
+    * - `cordova.plugins.diagnostic.motionStatus.DENIED` - user denied authorization.
     * - `cordova.plugins.diagnostic.motionStatus.RESTRICTED` - user cannot grant motion authorization.
     * - `cordova.plugins.diagnostic.motionStatus.NOT_AVAILABLE` - device does not support Motion Tracking.
     * Motion tracking is supported by iOS devices with an M7 co-processor (or above): that is iPhone 5s (or above), iPad Air (or above), iPad Mini 2 (or above).

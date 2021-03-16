@@ -708,7 +708,7 @@
     <script>
       ons.getScriptPage().onInit = function () {
         if (window.localStorage.getItem("versao_pro") === 'NAO') {
-          //admob.interstitial.show();
+          admob.interstitial.show();
         }
         app.registraAcesso('nvi/palavraDia.html');
         $("#textoVersiculo").html('');

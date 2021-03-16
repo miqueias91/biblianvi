@@ -14,7 +14,7 @@
 NSString*const UNKNOWN = @"unknown";
 
 NSString*const AUTHORIZATION_NOT_DETERMINED = @"not_determined";
-NSString*const AUTHORIZATION_DENIED = @"denied_always";
+NSString*const AUTHORIZATION_DENIED = @"denied";
 NSString*const AUTHORIZATION_GRANTED = @"authorized";
 
 // Internal constants
@@ -49,13 +49,24 @@ static Diagnostic* diagnostic = nil;
 - (void) switchToSettings: (CDVInvokedUrlCommand*)command
 {
     @try {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString: UIApplicationOpenSettingsURLString] options:@{} completionHandler:^(BOOL success) {
-            if (success) {
-                [self sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_OK] :command];
+        if (UIApplicationOpenSettingsURLString != nil ){
+            if ([[UIApplication sharedApplication] respondsToSelector:@selector(openURL:options:completionHandler:)]) {
+#if defined(__IPHONE_10_0) && __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_10_0
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString: UIApplicationOpenSettingsURLString] options:@{} completionHandler:^(BOOL success) {
+                    if (success) {
+                        [self sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_OK] :command];
+                    }else{
+                        [self sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR] :command];
+                    }
+                }];
+#endif
             }else{
-                [self sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR] :command];
+                [[UIApplication sharedApplication] openURL: [NSURL URLWithString: UIApplicationOpenSettingsURLString]];
+                [self sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_OK] :command];
             }
-        }];
+        }else{
+            [self sendPluginError:@"Not supported below iOS 8":command];
+        }
     }
     @catch (NSException *exception) {
         [self handlePluginException:exception :command];
@@ -71,7 +82,6 @@ static Diagnostic* diagnostic = nil;
         _status = [[UIApplication sharedApplication] backgroundRefreshStatus];
     }@catch (NSException *exception) {
         [self handlePluginException:exception :command];
-        return;
     }
     [self.commandDelegate runInBackground:^{
         @try {
@@ -266,13 +276,14 @@ static Diagnostic* diagnostic = nil;
 
 - (void) setSetting: (NSString*)key forValue:(id)value
 {
-    [[NSUserDefaults standardUserDefaults] setObject:value forKey:key];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+
+    [self.settings setObject:value forKey:key];
+    [self.settings synchronize];
 }
 
 - (id) getSetting: (NSString*) key
 {
-    return [[NSUserDefaults standardUserDefaults] objectForKey:key];
+    return [self.settings objectForKey:key];
 }
 
 @end

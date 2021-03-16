@@ -32,6 +32,7 @@ static NSString*const LOG_TAG = @"Diagnostic_Microphone[native]";
     [self.commandDelegate runInBackground:^{
         CDVPluginResult* pluginResult;
         @try {
+#ifdef __IPHONE_8_0
             AVAudioSessionRecordPermission recordPermission = [AVAudioSession sharedInstance].recordPermission;
 
             if(recordPermission == AVAudioSessionRecordPermissionGranted) {
@@ -41,6 +42,9 @@ static NSString*const LOG_TAG = @"Diagnostic_Microphone[native]";
                 pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsInt:0];
             }
             [diagnostic sendPluginResultBool:recordPermission == AVAudioSessionRecordPermissionGranted :command];
+#else
+            [diagnostic sendPluginError:@"Only supported on iOS 8 and higher":command];
+#endif
         }
         @catch (NSException *exception) {
             [diagnostic handlePluginException:exception :command];
@@ -52,6 +56,7 @@ static NSString*const LOG_TAG = @"Diagnostic_Microphone[native]";
 {
     [self.commandDelegate runInBackground:^{
         @try {
+#ifdef __IPHONE_8_0
             NSString* status;
             AVAudioSessionRecordPermission recordPermission = [AVAudioSession sharedInstance].recordPermission;
             switch(recordPermission){
@@ -68,6 +73,9 @@ static NSString*const LOG_TAG = @"Diagnostic_Microphone[native]";
 
             [diagnostic logDebug:[NSString stringWithFormat:@"Microphone authorization status is: %@", status]];
             [diagnostic sendPluginResultString:status:command];
+#else
+            [diagnostic sendPluginError:@"Only supported on iOS 8 and higher":command];
+#endif
         }
         @catch (NSException *exception) {
             [diagnostic handlePluginException:exception :command];

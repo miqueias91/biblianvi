@@ -37,7 +37,6 @@ var Diagnostic = (function(){
             "GET_ACCOUNTS": "GET_ACCOUNTS",
             "ACCESS_FINE_LOCATION": "ACCESS_FINE_LOCATION",
             "ACCESS_COARSE_LOCATION": "ACCESS_COARSE_LOCATION",
-            "ACCESS_BACKGROUND_LOCATION": "ACCESS_BACKGROUND_LOCATION",
             "RECORD_AUDIO": "RECORD_AUDIO",
             "READ_PHONE_STATE": "READ_PHONE_STATE",
             "CALL_PHONE": "CALL_PHONE",
@@ -66,7 +65,7 @@ var Diagnostic = (function(){
             "CALENDAR": ["READ_CALENDAR", "WRITE_CALENDAR"],
             "CAMERA": ["CAMERA"],
             "CONTACTS": ["READ_CONTACTS", "WRITE_CONTACTS", "GET_ACCOUNTS"],
-            "LOCATION": ["ACCESS_FINE_LOCATION", "ACCESS_COARSE_LOCATION", "ACCESS_BACKGROUND_LOCATION"],
+            "LOCATION": ["ACCESS_FINE_LOCATION", "ACCESS_COARSE_LOCATION"],
             "MICROPHONE": ["RECORD_AUDIO"],
             "PHONE": ["READ_PHONE_STATE", "CALL_PHONE", "ADD_VOICEMAIL", "USE_SIP", "PROCESS_OUTGOING_CALLS", "READ_CALL_LOG", "WRITE_CALL_LOG"],
             "SENSORS": ["BODY_SENSORS"],
@@ -76,24 +75,13 @@ var Diagnostic = (function(){
 
     Diagnostic.runtimePermissionStatus = // deprecated
         Diagnostic.permissionStatus = {
-            //  Location permission requested and 
-            //      app build SDK/user device is Android >10 and user granted background location ("all the time") permission,
-            //      or app build SDK/user device is Android 6-9 and user granted location permission,
-            //  or non-location permission requested
-            //      and app build SDK/user device is Android >=6 and user granted permission
-            //  or app build SDK/user device is Android <6
-            "GRANTED": "GRANTED",
-            //  Location permission requested 
-            //  and app build SDK/user device is Android >10 
-            //  and user granted background foreground location ("while-in-use") permission
-            "GRANTED_WHEN_IN_USE": "authorized_when_in_use",
-            // User denied access to this permission
-            "DENIED_ONCE": "DENIED_ONCE",
-            // User denied access to this permission and checked "Never Ask Again" box.
-            "DENIED_ALWAYS": "DENIED_ALWAYS",
-            // App has not yet requested access to this permission.
-            "NOT_REQUESTED": "NOT_REQUESTED"
+            "GRANTED": "GRANTED", //  User granted access to this permission, the device is running Android 5.x or below, or the app is built with API 22 or below.
+            "DENIED": "DENIED", // User denied access to this permission
+            "NOT_REQUESTED": "NOT_REQUESTED", // App has not yet requested access to this permission.
+            "DENIED_ALWAYS": "DENIED_ALWAYS" // User denied access to this permission and checked "Never Ask Again" box.
         };
+
+
 
     Diagnostic.cpuArchitecture = {
         UNKNOWN: "unknown",
@@ -1066,11 +1054,7 @@ var Diagnostic = (function(){
      *
      * @param {Function} successCallback - The callback which will be called when operation is successful.
      * This callback function is passed a single string parameter which indicates the authorization status.
-     * Possible values are:
-     * `cordova.plugins.diagnostic.permissionStatus.NOT_REQUESTED`
-     * `cordova.plugins.diagnostic.permissionStatus.DENIED_ONCE`
-     * `cordova.plugins.diagnostic.permissionStatus.DENIED_ALWAYS`
-     * `cordova.plugins.diagnostic.permissionStatus.GRANTED`
+     * Possible values are: "unknown", "denied", "not_determined", "authorized"
      * @param {Function} errorCallback -  The callback which will be called when operation encounters an error.
      * This callback function is passed a single string parameter containing the error message.
      */
@@ -1122,11 +1106,7 @@ var Diagnostic = (function(){
      *
      * @param {Function} successCallback - The callback which will be called when operation is successful.
      * This callback function is passed a single string parameter which indicates the authorization status.
-     * Possible values are:
-     * `cordova.plugins.diagnostic.permissionStatus.NOT_REQUESTED`
-     * `cordova.plugins.diagnostic.permissionStatus.DENIED_ONCE`
-     * `cordova.plugins.diagnostic.permissionStatus.DENIED_ALWAYS`
-     * `cordova.plugins.diagnostic.permissionStatus.GRANTED`
+     * Possible values are: "unknown", "denied", "not_determined", "authorized"
      * @param {Function} errorCallback -  The callback which will be called when operation encounters an error.
      * This callback function is passed a single string parameter containing the error message.
      */
@@ -1179,11 +1159,7 @@ var Diagnostic = (function(){
      *
      * @param {Function} successCallback - The callback which will be called when operation is successful.
      * This callback function is passed a single string parameter which indicates the authorization status.
-     * Possible values are:
-     * `cordova.plugins.diagnostic.permissionStatus.NOT_REQUESTED`
-     * `cordova.plugins.diagnostic.permissionStatus.DENIED_ONCE`
-     * `cordova.plugins.diagnostic.permissionStatus.DENIED_ALWAYS`
-     * `cordova.plugins.diagnostic.permissionStatus.GRANTED`
+     * Possible values are: "unknown", "denied", "not_determined", "authorized"
      * @param {Function} errorCallback -  The callback which will be called when operation encounters an error.
      * This callback function is passed a single string parameter containing the error message.
      */

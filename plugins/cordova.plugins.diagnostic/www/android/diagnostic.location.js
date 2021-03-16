@@ -30,10 +30,7 @@ var Diagnostic_Location = (function(){
     };
 
 
-    Diagnostic.locationAuthorizationMode = Diagnostic_Location.locationAuthorizationMode = {
-        "ALWAYS": "always",
-        "WHEN_IN_USE": "when_in_use"
-    };
+    Diagnostic.locationAuthorizationMode = Diagnostic_Location.locationAuthorizationMode = {}; // Empty object to enable easy cross-platform compatibility with iOS
 
     /********************
      *
@@ -44,19 +41,16 @@ var Diagnostic_Location = (function(){
     function combineLocationStatuses(statuses){
         var coarseStatus = statuses[Diagnostic.permission.ACCESS_COARSE_LOCATION],
             fineStatus = statuses[Diagnostic.permission.ACCESS_FINE_LOCATION],
-            backgroundStatus = statuses[Diagnostic.permission.ACCESS_BACKGROUND_LOCATION],
             status;
 
         if(coarseStatus === Diagnostic.permissionStatus.DENIED_ALWAYS || fineStatus === Diagnostic.permissionStatus.DENIED_ALWAYS){
             status = Diagnostic.permissionStatus.DENIED_ALWAYS;
-        }else if(coarseStatus === Diagnostic.permissionStatus.DENIED_ONCE || fineStatus === Diagnostic.permissionStatus.DENIED_ONCE){
-            status = Diagnostic.permissionStatus.DENIED_ONCE;
+        }else if(coarseStatus === Diagnostic.permissionStatus.DENIED || fineStatus === Diagnostic.permissionStatus.DENIED){
+            status = Diagnostic.permissionStatus.DENIED;
         }else if(coarseStatus === Diagnostic.permissionStatus.NOT_REQUESTED || fineStatus === Diagnostic.permissionStatus.NOT_REQUESTED){
             status = Diagnostic.permissionStatus.NOT_REQUESTED;
-        }else if(typeof backgroundStatus === 'undefined' || backgroundStatus === Diagnostic.permissionStatus.GRANTED){
-            status = Diagnostic.permissionStatus.GRANTED;
         }else{
-            status = Diagnostic.permissionStatus.GRANTED_WHEN_IN_USE;
+            status = Diagnostic.permissionStatus.GRANTED;
         }
         return status;
     }
@@ -217,24 +211,19 @@ var Diagnostic_Location = (function(){
      * @param {Function} successCallback - function to call on successful request for runtime permissions.
      * This callback function is passed a single string parameter which defines the resulting authorisation status as a value in cordova.plugins.diagnostic.permissionStatus.
      * @param {Function} errorCallback - function to call on failure to request authorisation.
-     * @param {String} mode - (optional) location authorization mode as a constant in `cordova.plugins.diagnostic.locationAuthorizationMode`.
-     * If not specified, defaults to `cordova.plugins.diagnostic.locationAuthorizationMode.WHEN_IN_USE`.
      */
-    Diagnostic_Location.requestLocationAuthorization = function(successCallback, errorCallback, mode){
+    Diagnostic_Location.requestLocationAuthorization = function(successCallback, errorCallback){
         function onSuccess(statuses){
             successCallback(combineLocationStatuses(statuses));
         }
-        return cordova.exec(
-            onSuccess,
-            errorCallback,
-            'Diagnostic_Location',
-            'requestLocationAuthorization',
-            [mode === Diagnostic_Location.locationAuthorizationMode.ALWAYS]
-        );
+        Diagnostic.requestRuntimePermissions(onSuccess, errorCallback, [
+            Diagnostic.permission.ACCESS_COARSE_LOCATION,
+            Diagnostic.permission.ACCESS_FINE_LOCATION
+        ]);
     };
 
     /**
-     * Returns the combined location authorization status for the application.
+     * Returns the location authorization status for the application.
      * Note: this is intended for Android 6 / API 23 and above. Calling on Android 5 / API 22 and below will always return GRANTED status as permissions are already granted at installation time.
      * @param {Function} successCallback - function to call on successful request for runtime permissions status.
      * This callback function is passed a single string parameter which defines the current authorisation status as a value in cordova.plugins.diagnostic.permissionStatus.
@@ -246,8 +235,7 @@ var Diagnostic_Location = (function(){
         }
         Diagnostic.getPermissionsAuthorizationStatus(onSuccess, errorCallback, [
             Diagnostic.permission.ACCESS_COARSE_LOCATION,
-            Diagnostic.permission.ACCESS_FINE_LOCATION,
-            Diagnostic.permission.ACCESS_BACKGROUND_LOCATION
+            Diagnostic.permission.ACCESS_FINE_LOCATION
         ]);
     };
 
@@ -260,7 +248,7 @@ var Diagnostic_Location = (function(){
      */
     Diagnostic_Location.isLocationAuthorized = function(successCallback, errorCallback){
         function onSuccess(status){
-            successCallback(status === Diagnostic.permissionStatus.GRANTED || status === Diagnostic.permissionStatus.GRANTED_WHEN_IN_USE);
+            successCallback(status === Diagnostic.permissionStatus.GRANTED);
         }
         Diagnostic_Location.getLocationAuthorizationStatus(onSuccess, errorCallback);
     };

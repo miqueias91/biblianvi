@@ -37,12 +37,17 @@
       "PACKAGE_NAME": "br.com.innovatesoft.biblianvi"
     },
     "cordova-plugin-x-socialsharing": {
+      "ANDROID_SUPPORT_V4_VERSION": "24.1.1+",
       "PACKAGE_NAME": "br.com.innovatesoft.biblianvi"
     },
     "cordova-promise-polyfill": {
       "PACKAGE_NAME": "br.com.innovatesoft.biblianvi"
     },
     "cordova-support-google-services": {
+      "PACKAGE_NAME": "br.com.innovatesoft.biblianvi"
+    },
+    "cordova.plugins.diagnostic": {
+      "ANDROID_SUPPORT_VERSION": "28.+",
       "PACKAGE_NAME": "br.com.innovatesoft.biblianvi"
     },
     "es6-promise-plugin": {
@@ -52,6 +57,10 @@
       "PACKAGE_NAME": "br.com.innovatesoft.biblianvi"
     },
     "phonegap-plugin-multidex": {
+      "PACKAGE_NAME": "br.com.innovatesoft.biblianvi"
+    },
+    "phonegap-plugin-push": {
+      "FCM_VERSION": "11.6.2",
       "PACKAGE_NAME": "br.com.innovatesoft.biblianvi"
     }
   },

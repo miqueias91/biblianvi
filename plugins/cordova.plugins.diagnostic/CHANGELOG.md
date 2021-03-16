@@ -1,49 +1,5 @@
 # CHANGELOG
 
-**v6.0.3**
-* (iOS) Update assertion to require `NSLocationAlwaysAndWhenInUseUsageDescription` instead of `NSLocationAlwaysUsageDescription` since the latter is deprecated since iOS 11.
-* Fix docs referring to `NOT_REQUESTED` constant
-    * Merged from PR [#414](https://github.com/dpa99c/cordova-diagnostic-plugin/pull/414)
-* (Android) Fix issues with background location permission when running on less than Android API 29 / 11.0.
-    * Resolves [#423](https://github.com/dpa99c/cordova-diagnostic-plugin/issues/423). 
-
-**v6.0.2**
-* (iOS) Update location accuracy authorization logic based on iOS 14 Beta 3. 
-    * Relates to [#402](https://github.com/dpa99c/cordova-diagnostic-plugin/issues/402). 
-
-**v6.0.1**
-* (iOS, bug fix): Fix handling of conditional logic for iOS version in location module. 
-    * Resolves [#406](https://github.com/dpa99c/cordova-diagnostic-plugin/issues/406).
-
-**v6.0.0**
-* (iOS) Support new location accuracy authorization API on iOS 14+.
-    * Resolves [#402](https://github.com/dpa99c/cordova-diagnostic-plugin/issues/402).
-* (Android) *BREAKING CHANGE:*  Migrate to AndroidX from Android Support Library
-    * The recommended Cordova Android platform version is now `cordova-android@9.0.0` (which includes AndroidX support).
-        * To use this plugin with `cordova-android@8`, install [cordova-plugin-androidx](https://github.com/dpa99c/cordova-plugin-androidx) and [cordova-plugin-androidx-adapter](https://github.com/dpa99c/cordova-plugin-androidx-adapter).
-* (iOS) *BREAKING CHANGE:* Remove conditional code to support iOS <= 9
-
-**v5.0.2**
-* (Android) Add support for background location permission on Android 10 / API 29. Resolves [#398](https://github.com/dpa99c/cordova-diagnostic-plugin/issues/398).
-* (Doc) Add doc about `locationAuthorizationMode` constants
-* (Doc) Fix error in `hasBluetoothSupport()` example
-* (Doc) Fix `enableDebug()` for iOS note
-* (iOS) Add return statement to getBackgroundRefreshStatus following handling of an exception raised when attempting to retrieve status. Resolves [#389](https://github.com/dpa99c/cordova-diagnostic-plugin/issues/389).
-* (iOS): If motion tracking is not available on the device, return "not available" when calling getMotionAuthorizationStatus(). Further resolves [#372](https://github.com/dpa99c/cordova-diagnostic-plugin/issues/372).
-
-
-**v5.0.1**
-* Add types for various statuses constants (thanks to [@fcamblor](https://github.com/fcamblor))
-* (iOS) Add placeholder `NSBluetoothAlwaysUsageDescription` to Bluetooth module. 
-    * Resolves [#369](https://github.com/dpa99c/cordova-diagnostic-plugin/issues/369).
-* (iOS) Only initialise the native Bluetooth manager on calling a plugin API operation in the Bluetooth module.
-    * This is necessary because on iOS 13, since initialising the Bluetooth manager implicitly requests runtime access to Bluetooth, presenting the user with a permission dialog.
-    * Fixes [#365](https://github.com/dpa99c/cordova-diagnostic-plugin/issues/365).
-* (iOS): Fix setting/getting of persistent user settings so motion permission status is correctly determined. Fixes [#372](https://github.com/dpa99c/cordova-diagnostic-plugin/issues/372).    
-
-**v5.0.0**
-* BREAKING CHANGE - Align permission status constants between iOS and Android platforms. Resolves [#230](https://github.com/dpa99c/cordova-diagnostic-plugin/issues/230).
-
 **v4.0.12**
 * Enable default version of Android Support Library to be overridden at plugin installation via ANDROID_SUPPORT_VERSION plugin variable. Resolves [#338](https://github.com/dpa99c/cordova-diagnostic-plugin/issues/338).
 * Bump default Android Support Library version to `28.+` to match `cordova-android@8.0.0`.
