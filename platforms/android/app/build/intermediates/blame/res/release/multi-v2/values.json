@@ -1,25 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "/var/www/app/biblianvi/platforms/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values/values.xml",
+            "outputFile": "/var/www/app/android/biblianvi/platforms/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values/values.xml",
             "map": [
-                {
-                    "source": "/var/www/app/biblianvi/platforms/android/app/build/generated/res/google-services/release/values/values.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "55,199,331,413,517,626,746",
-                        "endColumns": "143,131,81,103,108,119,107",
-                        "endOffsets": "194,326,408,512,621,741,849"
-                    },
-                    "to": {
-                        "startLines": "269,271,272,273,274,275,276",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "19226,19452,19584,19666,19770,19879,19999",
-                        "endColumns": "143,131,81,103,108,119,107",
-                        "endOffsets": "19365,19579,19661,19765,19874,19994,20102"
-                    }
-                },
                 {
                     "source": "/home/miqueias/.gradle/caches/transforms-2/files-2.1/632486dd5fe09fc419b241de4620e909/play-services-basement-11.6.2/res/values/values.xml",
                     "from": {
@@ -55,20 +38,20 @@
                     }
                 },
                 {
-                    "source": "/var/www/app/biblianvi/platforms/android/app/src/main/res/values/strings.xml",
+                    "source": "/var/www/app/android/biblianvi/platforms/android/app/build/generated/res/google-services/release/values/values.xml",
                     "from": {
-                        "startLines": "4,2,3",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "170,55,111",
-                        "endColumns": "63,55,58",
-                        "endOffsets": "229,106,165"
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "55,199,331,413,517,626,746",
+                        "endColumns": "143,131,81,103,108,119,107",
+                        "endOffsets": "194,326,408,512,621,741,849"
                     },
                     "to": {
-                        "startLines": "250,251,277",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "16889,16953,20107",
-                        "endColumns": "63,55,58",
-                        "endOffsets": "16948,17004,20161"
+                        "startLines": "269,271,272,273,274,275,276",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "19226,19452,19584,19666,19770,19879,19999",
+                        "endColumns": "143,131,81,103,108,119,107",
+                        "endOffsets": "19365,19579,19661,19765,19874,19994,20102"
                     }
                 },
                 {
@@ -141,6 +124,23 @@
                         "startOffsets": "20166,20208,20285,20323,20362,20415,20483",
                         "endColumns": "41,76,37,38,52,67,38",
                         "endOffsets": "20203,20280,20318,20357,20410,20478,20517"
+                    }
+                },
+                {
+                    "source": "/var/www/app/android/biblianvi/platforms/android/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "4,2,3",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "170,55,111",
+                        "endColumns": "63,55,58",
+                        "endOffsets": "229,106,165"
+                    },
+                    "to": {
+                        "startLines": "250,251,277",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "16889,16953,20107",
+                        "endColumns": "63,55,58",
+                        "endOffsets": "16948,17004,20161"
                     }
                 },
                 {

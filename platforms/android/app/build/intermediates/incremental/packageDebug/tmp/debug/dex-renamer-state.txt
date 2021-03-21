@@ -1,7 +1,7 @@
-#Tue Mar 16 14:45:42 BRT 2021
-base.0=/var/www/app/biblianvi/platforms/android/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
+#Sat Mar 20 21:27:25 BRT 2021
+base.0=/var/www/app/android/biblianvi/platforms/android/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
 path.1=classes2.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=/var/www/app/biblianvi/platforms/android/app/build/intermediates/dex/debug/mergeDexDebug/classes2.dex
+base.1=/var/www/app/android/biblianvi/platforms/android/app/build/intermediates/dex/debug/mergeDexDebug/classes2.dex
