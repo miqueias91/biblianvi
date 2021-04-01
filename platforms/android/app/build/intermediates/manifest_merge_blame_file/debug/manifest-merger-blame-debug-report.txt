@@ -2,13 +2,13 @@
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="br.com.innovatesoft.biblianvi"
 4    android:hardwareAccelerated="true"
-5    android:versionCode="10001"
-6    android:versionName="1.0.1" >
+5    android:versionCode="10002"
+6    android:versionName="1.0.2" >
 7
 8    <uses-sdk
 9        android:minSdkVersion="19"
 9-->/var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml
-10        android:targetSdkVersion="29" />
+10        android:targetSdkVersion="30" />
 10-->/var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml
 11
 12    <supports-screens
