@@ -2,8 +2,8 @@
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="br.com.innovatesoft.biblianvi"
 4    android:hardwareAccelerated="true"
-5    android:versionCode="10003"
-6    android:versionName="1.0.3" >
+5    android:versionCode="10004"
+6    android:versionName="1.0.4" >
 7
 8    <uses-sdk
 9        android:minSdkVersion="19"
@@ -60,74 +60,74 @@
 32-->/var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:52:22-63
 33    <!-- Create a unique permission for your app and use it so only your app can receive your OneSignal messages. -->
 34    <permission
-34-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:8:5-10:47
+34-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:8:5-10:47
 35        android:name="br.com.innovatesoft.biblianvi.permission.C2D_MESSAGE"
-35-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:9:9-63
+35-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:9:9-63
 36        android:protectionLevel="signature" />
-36-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:10:9-44
+36-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:10:9-44
 37
 38    <uses-permission android:name="br.com.innovatesoft.biblianvi.permission.C2D_MESSAGE" />
-38-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:12:5-79
-38-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:12:22-76
+38-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:12:5-79
+38-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:12:22-76
 39    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-39-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:18:5-82
-39-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:18:22-79
+39-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:18:5-82
+39-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:18:22-79
 40    <!--
 41 Use to restore notifications the user hasn't interacted with.
 42         They could be missed notifications if the user reboots their device if this isn't in place.
 43    -->
 44    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- START: ShortcutBadger -->
-44-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:30:5-81
-44-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:30:22-78
+44-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:30:5-81
+44-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:30:22-78
 45    <!-- Samsung -->
 46    <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
-46-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:32:5-86
-46-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:32:22-83
+46-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:32:5-86
+46-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:32:22-83
 47    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" /> <!-- HTC -->
-47-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:33:5-87
-47-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:33:22-84
+47-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:33:5-87
+47-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:33:22-84
 48    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
-48-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:34:5-81
-48-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:34:22-78
+48-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:34:5-81
+48-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:34:22-78
 49    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" /> <!-- Sony -->
-49-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:35:5-83
-49-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:35:22-80
+49-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:35:5-83
+49-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:35:22-80
 50    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
-50-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:36:5-88
-50-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:36:22-85
+50-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:36:5-88
+50-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:36:22-85
 51    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE" /> <!-- Apex -->
-51-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:37:5-92
-51-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:37:22-89
+51-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:37:5-92
+51-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:37:22-89
 52    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" /> <!-- Solid -->
-52-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:38:5-84
-52-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:38:22-81
+52-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:38:5-84
+52-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:38:22-81
 53    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" /> <!-- Huawei -->
-53-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:39:5-83
-53-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:39:22-80
+53-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:39:5-83
+53-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:39:22-80
 54    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
-54-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:40:5-91
-54-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:40:22-88
+54-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:40:5-91
+54-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:40:22-88
 55    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" />
-55-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:41:5-92
-55-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:41:22-89
+55-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:41:5-92
+55-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:41:22-89
 56    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" /> <!-- ZUK -->
-56-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:42:5-93
-56-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:42:22-90
+56-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:42:5-93
+56-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:42:22-90
 57    <uses-permission android:name="android.permission.READ_APP_BADGE" /> <!-- OPPO -->
-57-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:43:5-73
-57-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:43:22-70
+57-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:43:5-73
+57-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:43:22-70
 58    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS" />
-58-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:44:5-82
-58-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:44:22-79
+58-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:44:5-82
+58-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:44:22-79
 59    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS" /> <!-- EvMe -->
-59-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:45:5-83
-59-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:45:22-80
+59-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:45:5-83
+59-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:45:22-80
 60    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ" />
-60-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:46:5-88
-60-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:46:22-85
+60-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:46:5-88
+60-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:46:22-85
 61    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE" />
-61-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:47:5-89
-61-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:47:22-86
+61-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:47:5-89
+61-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:47:22-86
 62
 63    <application
 63-->/var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:5:5-44:19
@@ -175,7 +175,7 @@
 85            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
 85-->/var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:12:19-128
 86            android:exported="false"
-86-->[com.google.android.gms:play-services-ads-lite:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/2687d8b11493d1a50c41564609ebe9c3/play-services-ads-lite-11.6.2/AndroidManifest.xml:25:231-255
+86-->[com.google.android.gms:play-services-ads-lite:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/07a2ebf7abdd0b6162ce4101379df5de/play-services-ads-lite-11.6.2/AndroidManifest.xml:25:231-255
 87            android:theme="@android:style/Theme.Translucent" />
 87-->/var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:12:182-230
 88
@@ -291,32 +291,32 @@
 148        </service>
 149
 150        <meta-data
-150-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:50:9-52:51
+150-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:50:9-52:51
 151            android:name="onesignal_app_id"
-151-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:51:13-44
+151-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:51:13-44
 152            android:value="" /> <!-- Deprecated - Pulled from OneSignal dashboard. -->
-152-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:52:13-48
+152-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:52:13-48
 153        <meta-data
-153-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:54:9-56:70
+153-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:54:9-56:70
 154            android:name="onesignal_google_project_number"
-154-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:55:13-59
+154-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:55:13-59
 155            android:value="str:REMOTE" />
-155-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:56:13-67
+155-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:56:13-67
 156
 157        <receiver
-157-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:58:9-68:20
+157-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:58:9-68:20
 158            android:name="com.onesignal.GcmBroadcastReceiver"
-158-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:59:13-62
+158-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:59:13-62
 159            android:permission="com.google.android.c2dm.permission.SEND" >
-159-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:60:13-73
+159-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:60:13-73
 160
 161            <!-- High priority so OneSignal payloads can be filtered from other GCM receivers if filterOtherGCMReceivers is enabled. -->
 162            <intent-filter android:priority="999" >
-162-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:63:13-67:29
-162-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:63:28-50
+162-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:63:13-67:29
+162-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:63:28-50
 163                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-163-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:64:17-81
-163-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:64:25-78
+163-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:64:17-81
+163-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:64:25-78
 164
 165                <category android:name="br.com.innovatesoft.biblianvi" />
 165-->/var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:28:17-74
@@ -324,96 +324,96 @@
 166            </intent-filter>
 167        </receiver>
 168        <receiver android:name="com.onesignal.NotificationOpenedReceiver" />
-168-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:69:9-77
-168-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:69:19-74
+168-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:69:9-77
+168-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:69:19-74
 169
 170        <service android:name="com.onesignal.GcmIntentService" />
-170-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:71:9-66
-170-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:71:18-63
+170-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:71:9-66
+170-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:71:18-63
 171        <service
-171-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:72:9-74:72
+171-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:72:9-74:72
 172            android:name="com.onesignal.GcmIntentJobService"
-172-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:73:13-61
+172-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:73:13-61
 173            android:permission="android.permission.BIND_JOB_SERVICE" />
-173-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:74:13-69
+173-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:74:13-69
 174        <service
-174-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:75:9-77:72
+174-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:75:9-77:72
 175            android:name="com.onesignal.RestoreJobService"
-175-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:76:13-59
+175-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:76:13-59
 176            android:permission="android.permission.BIND_JOB_SERVICE" />
-176-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:77:13-69
+176-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:77:13-69
 177        <service
-177-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:78:9-80:72
+177-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:78:9-80:72
 178            android:name="com.onesignal.RestoreKickoffJobService"
-178-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:79:13-66
+178-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:79:13-66
 179            android:permission="android.permission.BIND_JOB_SERVICE" />
-179-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:80:13-69
+179-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:80:13-69
 180        <service
-180-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:81:9-83:43
+180-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:81:9-83:43
 181            android:name="com.onesignal.SyncService"
-181-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:82:13-53
+181-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:82:13-53
 182            android:stopWithTask="true" />
-182-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:83:13-40
+182-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:83:13-40
 183        <service
-183-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:84:9-86:72
+183-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:84:9-86:72
 184            android:name="com.onesignal.SyncJobService"
-184-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:85:13-56
+184-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:85:13-56
 185            android:permission="android.permission.BIND_JOB_SERVICE" />
-185-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:86:13-69
+185-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:86:13-69
 186
 187        <activity
-187-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:88:9-90:75
+187-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:88:9-90:75
 188            android:name="com.onesignal.PermissionsActivity"
-188-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:89:13-61
+188-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:89:13-61
 189            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-189-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:90:13-72
+189-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:90:13-72
 190
 191        <service android:name="com.onesignal.NotificationRestoreService" />
-191-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:92:9-76
-191-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:92:18-73
+191-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:92:9-76
+191-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:92:18-73
 192
 193        <receiver android:name="com.onesignal.BootUpReceiver" >
-193-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:94:9-99:20
-193-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:94:19-62
+193-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:94:9-99:20
+193-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:94:19-62
 194            <intent-filter>
-194-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:95:13-98:29
+194-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:95:13-98:29
 195                <action android:name="android.intent.action.BOOT_COMPLETED" />
-195-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:96:17-79
-195-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:96:25-76
+195-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:96:17-79
+195-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:96:25-76
 196                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
-196-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:97:17-82
-196-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:97:25-79
+196-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:97:17-82
+196-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:97:25-79
 197            </intent-filter>
 198        </receiver>
 199        <receiver android:name="com.onesignal.UpgradeReceiver" >
-199-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:100:9-104:20
-199-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:100:19-63
+199-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:100:9-104:20
+199-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:100:19-63
 200            <intent-filter>
-200-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:101:13-103:29
+200-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:101:13-103:29
 201                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
-201-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:102:17-84
-201-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:102:25-81
+201-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:102:17-84
+201-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:102:25-81
 202            </intent-filter>
 203        </receiver>
 204
 205        <activity
-205-->[com.google.android.gms:play-services-base:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/a9dc6ad9d3e2783efc16845fc813f36b/play-services-base-11.6.2/AndroidManifest.xml:19:9-172
+205-->[com.google.android.gms:play-services-base:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/cb030288a356491ab854f42d73421c49/play-services-base-11.6.2/AndroidManifest.xml:19:9-172
 206            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-206-->[com.google.android.gms:play-services-base:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/a9dc6ad9d3e2783efc16845fc813f36b/play-services-base-11.6.2/AndroidManifest.xml:19:19-85
+206-->[com.google.android.gms:play-services-base:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/cb030288a356491ab854f42d73421c49/play-services-base-11.6.2/AndroidManifest.xml:19:19-85
 207            android:exported="false"
-207-->[com.google.android.gms:play-services-base:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/a9dc6ad9d3e2783efc16845fc813f36b/play-services-base-11.6.2/AndroidManifest.xml:19:146-170
+207-->[com.google.android.gms:play-services-base:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/cb030288a356491ab854f42d73421c49/play-services-base-11.6.2/AndroidManifest.xml:19:146-170
 208            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-208-->[com.google.android.gms:play-services-base:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/a9dc6ad9d3e2783efc16845fc813f36b/play-services-base-11.6.2/AndroidManifest.xml:19:86-145
+208-->[com.google.android.gms:play-services-base:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/cb030288a356491ab854f42d73421c49/play-services-base-11.6.2/AndroidManifest.xml:19:86-145
 209        <!--
 210 FirebaseMessagingService performs security checks at runtime,
 211             no need for explicit permissions despite exported="true"
 212        -->
 213        <service
-213-->[com.google.firebase:firebase-messaging:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/a0b9094d6ab457210d7b708eb6fbf523/firebase-messaging-11.6.2/AndroidManifest.xml:23:9-27:19
+213-->[com.google.firebase:firebase-messaging:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/89942aa027505c58e3ade23dd3bf94e1/firebase-messaging-11.6.2/AndroidManifest.xml:23:9-27:19
 214            android:name="com.google.firebase.messaging.FirebaseMessagingService"
-214-->[com.google.firebase:firebase-messaging:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/a0b9094d6ab457210d7b708eb6fbf523/firebase-messaging-11.6.2/AndroidManifest.xml:23:18-87
+214-->[com.google.firebase:firebase-messaging:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/89942aa027505c58e3ade23dd3bf94e1/firebase-messaging-11.6.2/AndroidManifest.xml:23:18-87
 215            android:exported="true" >
-215-->[com.google.firebase:firebase-messaging:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/a0b9094d6ab457210d7b708eb6fbf523/firebase-messaging-11.6.2/AndroidManifest.xml:23:88-111
+215-->[com.google.firebase:firebase-messaging:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/89942aa027505c58e3ade23dd3bf94e1/firebase-messaging-11.6.2/AndroidManifest.xml:23:88-111
 216            <intent-filter android:priority="-500" >
 216-->/var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:35:13-37:29
 217                <action android:name="com.google.firebase.MESSAGING_EVENT" />
@@ -423,64 +423,64 @@
 219        </service>
 220
 221        <receiver
-221-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/02671c6f75e09b3d81498062d9238e7b/firebase-analytics-11.6.2/AndroidManifest.xml:25:7-26:18
+221-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e9744a53dcd0cf111cee2f40020cf1f5/firebase-analytics-11.6.2/AndroidManifest.xml:25:7-26:18
 222            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-222-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/02671c6f75e09b3d81498062d9238e7b/firebase-analytics-11.6.2/AndroidManifest.xml:25:17-89
+222-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e9744a53dcd0cf111cee2f40020cf1f5/firebase-analytics-11.6.2/AndroidManifest.xml:25:17-89
 223            android:enabled="true"
-223-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/02671c6f75e09b3d81498062d9238e7b/firebase-analytics-11.6.2/AndroidManifest.xml:25:90-112
+223-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e9744a53dcd0cf111cee2f40020cf1f5/firebase-analytics-11.6.2/AndroidManifest.xml:25:90-112
 224            android:exported="false" >
-224-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/02671c6f75e09b3d81498062d9238e7b/firebase-analytics-11.6.2/AndroidManifest.xml:25:113-137
+224-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e9744a53dcd0cf111cee2f40020cf1f5/firebase-analytics-11.6.2/AndroidManifest.xml:25:113-137
 225        </receiver>
 226        <receiver
-226-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/02671c6f75e09b3d81498062d9238e7b/firebase-analytics-11.6.2/AndroidManifest.xml:27:7-31:18
+226-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e9744a53dcd0cf111cee2f40020cf1f5/firebase-analytics-11.6.2/AndroidManifest.xml:27:7-31:18
 227            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
-227-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/02671c6f75e09b3d81498062d9238e7b/firebase-analytics-11.6.2/AndroidManifest.xml:27:17-104
+227-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e9744a53dcd0cf111cee2f40020cf1f5/firebase-analytics-11.6.2/AndroidManifest.xml:27:17-104
 228            android:enabled="true"
-228-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/02671c6f75e09b3d81498062d9238e7b/firebase-analytics-11.6.2/AndroidManifest.xml:27:162-184
+228-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e9744a53dcd0cf111cee2f40020cf1f5/firebase-analytics-11.6.2/AndroidManifest.xml:27:162-184
 229            android:exported="true"
-229-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/02671c6f75e09b3d81498062d9238e7b/firebase-analytics-11.6.2/AndroidManifest.xml:27:185-208
+229-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e9744a53dcd0cf111cee2f40020cf1f5/firebase-analytics-11.6.2/AndroidManifest.xml:27:185-208
 230            android:permission="android.permission.INSTALL_PACKAGES" >
-230-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/02671c6f75e09b3d81498062d9238e7b/firebase-analytics-11.6.2/AndroidManifest.xml:27:105-161
+230-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e9744a53dcd0cf111cee2f40020cf1f5/firebase-analytics-11.6.2/AndroidManifest.xml:27:105-161
 231            <intent-filter>
-231-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/02671c6f75e09b3d81498062d9238e7b/firebase-analytics-11.6.2/AndroidManifest.xml:28:11-30:27
+231-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e9744a53dcd0cf111cee2f40020cf1f5/firebase-analytics-11.6.2/AndroidManifest.xml:28:11-30:27
 232                <action android:name="com.android.vending.INSTALL_REFERRER" />
-232-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/02671c6f75e09b3d81498062d9238e7b/firebase-analytics-11.6.2/AndroidManifest.xml:29:15-76
-232-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/02671c6f75e09b3d81498062d9238e7b/firebase-analytics-11.6.2/AndroidManifest.xml:29:23-74
+232-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e9744a53dcd0cf111cee2f40020cf1f5/firebase-analytics-11.6.2/AndroidManifest.xml:29:15-76
+232-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e9744a53dcd0cf111cee2f40020cf1f5/firebase-analytics-11.6.2/AndroidManifest.xml:29:23-74
 233            </intent-filter>
 234        </receiver>
 235
 236        <service
-236-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/02671c6f75e09b3d81498062d9238e7b/firebase-analytics-11.6.2/AndroidManifest.xml:32:7-137
+236-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e9744a53dcd0cf111cee2f40020cf1f5/firebase-analytics-11.6.2/AndroidManifest.xml:32:7-137
 237            android:name="com.google.android.gms.measurement.AppMeasurementService"
-237-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/02671c6f75e09b3d81498062d9238e7b/firebase-analytics-11.6.2/AndroidManifest.xml:32:16-87
+237-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e9744a53dcd0cf111cee2f40020cf1f5/firebase-analytics-11.6.2/AndroidManifest.xml:32:16-87
 238            android:enabled="true"
-238-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/02671c6f75e09b3d81498062d9238e7b/firebase-analytics-11.6.2/AndroidManifest.xml:32:88-110
+238-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e9744a53dcd0cf111cee2f40020cf1f5/firebase-analytics-11.6.2/AndroidManifest.xml:32:88-110
 239            android:exported="false" />
-239-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/02671c6f75e09b3d81498062d9238e7b/firebase-analytics-11.6.2/AndroidManifest.xml:32:111-135
+239-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e9744a53dcd0cf111cee2f40020cf1f5/firebase-analytics-11.6.2/AndroidManifest.xml:32:111-135
 240        <service
-240-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/02671c6f75e09b3d81498062d9238e7b/firebase-analytics-11.6.2/AndroidManifest.xml:33:7-197
+240-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e9744a53dcd0cf111cee2f40020cf1f5/firebase-analytics-11.6.2/AndroidManifest.xml:33:7-197
 241            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-241-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/02671c6f75e09b3d81498062d9238e7b/firebase-analytics-11.6.2/AndroidManifest.xml:33:16-90
+241-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e9744a53dcd0cf111cee2f40020cf1f5/firebase-analytics-11.6.2/AndroidManifest.xml:33:16-90
 242            android:enabled="true"
-242-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/02671c6f75e09b3d81498062d9238e7b/firebase-analytics-11.6.2/AndroidManifest.xml:33:148-170
+242-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e9744a53dcd0cf111cee2f40020cf1f5/firebase-analytics-11.6.2/AndroidManifest.xml:33:148-170
 243            android:exported="false"
-243-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/02671c6f75e09b3d81498062d9238e7b/firebase-analytics-11.6.2/AndroidManifest.xml:33:171-195
+243-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e9744a53dcd0cf111cee2f40020cf1f5/firebase-analytics-11.6.2/AndroidManifest.xml:33:171-195
 244            android:permission="android.permission.BIND_JOB_SERVICE" />
-244-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/02671c6f75e09b3d81498062d9238e7b/firebase-analytics-11.6.2/AndroidManifest.xml:33:91-147
+244-->[com.google.firebase:firebase-analytics:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e9744a53dcd0cf111cee2f40020cf1f5/firebase-analytics-11.6.2/AndroidManifest.xml:33:91-147
 245
 246        <receiver
-246-->[com.google.firebase:firebase-iid:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/556119e82ef23807b8709b80bd7d3e5e/firebase-iid-11.6.2/AndroidManifest.xml:31:9-36:20
+246-->[com.google.firebase:firebase-iid:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/044306941b764b5947c5df282d93da6e/firebase-iid-11.6.2/AndroidManifest.xml:31:9-36:20
 247            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-247-->[com.google.firebase:firebase-iid:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/556119e82ef23807b8709b80bd7d3e5e/firebase-iid-11.6.2/AndroidManifest.xml:31:19-84
+247-->[com.google.firebase:firebase-iid:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/044306941b764b5947c5df282d93da6e/firebase-iid-11.6.2/AndroidManifest.xml:31:19-84
 248            android:exported="true"
-248-->[com.google.firebase:firebase-iid:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/556119e82ef23807b8709b80bd7d3e5e/firebase-iid-11.6.2/AndroidManifest.xml:31:85-108
+248-->[com.google.firebase:firebase-iid:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/044306941b764b5947c5df282d93da6e/firebase-iid-11.6.2/AndroidManifest.xml:31:85-108
 249            android:permission="com.google.android.c2dm.permission.SEND" >
-249-->[com.google.firebase:firebase-iid:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/556119e82ef23807b8709b80bd7d3e5e/firebase-iid-11.6.2/AndroidManifest.xml:31:109-169
+249-->[com.google.firebase:firebase-iid:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/044306941b764b5947c5df282d93da6e/firebase-iid-11.6.2/AndroidManifest.xml:31:109-169
 250            <intent-filter>
-250-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:63:13-67:29
+250-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:63:13-67:29
 251                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-251-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:64:17-81
-251-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/e997123954b34e6750e8287a3a7bbc65/OneSignal-3.10.5/AndroidManifest.xml:64:25-78
+251-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:64:17-81
+251-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-2/files-2.1/30baf4a912c5fa785338ce2725f0e55e/OneSignal-3.10.5/AndroidManifest.xml:64:25-78
 252
 253                <category android:name="br.com.innovatesoft.biblianvi" />
 253-->/var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:28:17-74
@@ -492,11 +492,11 @@
 258             no need for explicit permissions despite exported="true"
 259        -->
 260        <service
-260-->[com.google.firebase:firebase-iid:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/556119e82ef23807b8709b80bd7d3e5e/firebase-iid-11.6.2/AndroidManifest.xml:40:9-44:19
+260-->[com.google.firebase:firebase-iid:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/044306941b764b5947c5df282d93da6e/firebase-iid-11.6.2/AndroidManifest.xml:40:9-44:19
 261            android:name="com.google.firebase.iid.FirebaseInstanceIdService"
-261-->[com.google.firebase:firebase-iid:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/556119e82ef23807b8709b80bd7d3e5e/firebase-iid-11.6.2/AndroidManifest.xml:40:18-82
+261-->[com.google.firebase:firebase-iid:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/044306941b764b5947c5df282d93da6e/firebase-iid-11.6.2/AndroidManifest.xml:40:18-82
 262            android:exported="true" >
-262-->[com.google.firebase:firebase-iid:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/556119e82ef23807b8709b80bd7d3e5e/firebase-iid-11.6.2/AndroidManifest.xml:40:83-106
+262-->[com.google.firebase:firebase-iid:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/044306941b764b5947c5df282d93da6e/firebase-iid-11.6.2/AndroidManifest.xml:40:83-106
 263            <intent-filter android:priority="-500" >
 263-->/var/www/app/android/biblianvi/platforms/android/app/src/main/AndroidManifest.xml:40:13-42:29
 264                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
@@ -506,22 +506,22 @@
 266        </service>
 267
 268        <provider
-268-->[com.google.firebase:firebase-common:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/657938d74fa656b40b8672f118dd1d2c/firebase-common-11.6.2/AndroidManifest.xml:6:9-194
+268-->[com.google.firebase:firebase-common:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/677163dadf31f6d9b4616e6fb8c6d9a1/firebase-common-11.6.2/AndroidManifest.xml:6:9-194
 269            android:name="com.google.firebase.provider.FirebaseInitProvider"
-269-->[com.google.firebase:firebase-common:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/657938d74fa656b40b8672f118dd1d2c/firebase-common-11.6.2/AndroidManifest.xml:6:79-143
+269-->[com.google.firebase:firebase-common:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/677163dadf31f6d9b4616e6fb8c6d9a1/firebase-common-11.6.2/AndroidManifest.xml:6:79-143
 270            android:authorities="br.com.innovatesoft.biblianvi.firebaseinitprovider"
-270-->[com.google.firebase:firebase-common:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/657938d74fa656b40b8672f118dd1d2c/firebase-common-11.6.2/AndroidManifest.xml:6:19-78
+270-->[com.google.firebase:firebase-common:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/677163dadf31f6d9b4616e6fb8c6d9a1/firebase-common-11.6.2/AndroidManifest.xml:6:19-78
 271            android:exported="false"
-271-->[com.google.firebase:firebase-common:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/657938d74fa656b40b8672f118dd1d2c/firebase-common-11.6.2/AndroidManifest.xml:6:144-168
+271-->[com.google.firebase:firebase-common:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/677163dadf31f6d9b4616e6fb8c6d9a1/firebase-common-11.6.2/AndroidManifest.xml:6:144-168
 272            android:initOrder="100" />
-272-->[com.google.firebase:firebase-common:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/657938d74fa656b40b8672f118dd1d2c/firebase-common-11.6.2/AndroidManifest.xml:6:169-192
+272-->[com.google.firebase:firebase-common:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/677163dadf31f6d9b4616e6fb8c6d9a1/firebase-common-11.6.2/AndroidManifest.xml:6:169-192
 273
 274        <meta-data
-274-->[com.google.android.gms:play-services-basement:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/632486dd5fe09fc419b241de4620e909/play-services-basement-11.6.2/AndroidManifest.xml:20:9-121
+274-->[com.google.android.gms:play-services-basement:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/3f080e308b94b003cb760a3dbea7bd34/play-services-basement-11.6.2/AndroidManifest.xml:20:9-121
 275            android:name="com.google.android.gms.version"
-275-->[com.google.android.gms:play-services-basement:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/632486dd5fe09fc419b241de4620e909/play-services-basement-11.6.2/AndroidManifest.xml:20:20-65
+275-->[com.google.android.gms:play-services-basement:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/3f080e308b94b003cb760a3dbea7bd34/play-services-basement-11.6.2/AndroidManifest.xml:20:20-65
 276            android:value="@integer/google_play_services_version" />
-276-->[com.google.android.gms:play-services-basement:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/632486dd5fe09fc419b241de4620e909/play-services-basement-11.6.2/AndroidManifest.xml:20:66-119
+276-->[com.google.android.gms:play-services-basement:11.6.2] /home/miqueias/.gradle/caches/transforms-2/files-2.1/3f080e308b94b003cb760a3dbea7bd34/play-services-basement-11.6.2/AndroidManifest.xml:20:66-119
 277    </application>
 278
 279</manifest>
