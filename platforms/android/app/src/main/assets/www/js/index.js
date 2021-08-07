@@ -101,12 +101,26 @@ window.fn.hideDialog = function (id) {
 var app = {
   // Application Constructor
   initialize: function() {
+    var nome = window.localStorage.getItem("nome") ? window.localStorage.getItem("nome") : '';
+    var usuario = window.localStorage.getItem("usuario") ? window.localStorage.getItem("usuario") : '';
+    var email = window.localStorage.getItem("email") ? window.localStorage.getItem("email") : '';
+    var celular = window.localStorage.getItem("celular") ? window.localStorage.getItem("celular") : '';
+    var religiao = window.localStorage.getItem("religiao") ? window.localStorage.getItem("religiao") : '';
 
-    if (JSON.parse(ultimo_capitulo_lido)) {
-      fn.pushPage({'id': 'textoLivro.html', 'title': ultimo_livro_lido_abr+'||'+ultimo_livro_lido+'||200||'+ultimo_capitulo_lido});
+    if(nome == '' || usuario == '' || email == '' || celular == '' || religiao == ''){
+      ons.notification.alert(
+        'Complete suas informações para uma melhor experiência no seu aplicativo!',
+        {title: 'Atenção'}
+      );
+      fn.pushPage({'id': 'minhaConfiguracao.html', 'title': 'Minha Configuração'});
     }
-    else{
-      fn.pushPage({'id': 'textoLivro.html', 'title': 'Gn||Gênesis||50||1'});
+    else{      
+      if (JSON.parse(ultimo_capitulo_lido)) {
+        fn.pushPage({'id': 'textoLivro.html', 'title': ultimo_livro_lido_abr+'||'+ultimo_livro_lido+'||200||'+ultimo_capitulo_lido});
+      }
+      else{
+        fn.pushPage({'id': 'textoLivro.html', 'title': 'Gn||Gênesis||50||1'});
+      }
     }
     document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     document.addEventListener('admob.banner.events.LOAD_FAIL', function(event) {
@@ -208,7 +222,7 @@ var app = {
     }
     return false;
   },  
-  buscaFavorioHinario: function(hinario, id_hinario) {
+  buscaFavoritoHinario: function(hinario, id_hinario) {
     var array = JSON.parse(localStorage.getItem('lista-favorito-hinario'));
     if (array) {
       for(var k=0; k < array.length; k++) {
@@ -221,14 +235,14 @@ var app = {
     }
     return '#f5f5f5'
   },
-  incluirFavorioHinario: function(hinario, id_hinario, titulo) {
+  incluirFavoritoHinario: function(hinario, id_hinario, titulo) {
     var favorito_hinario = JSON.parse(localStorage.getItem('lista-favorito-hinario') || '[]');
     favorito_hinario.push({hinario: hinario, id_hinario: id_hinario, titulo: titulo});
     localStorage.setItem("lista-favorito-hinario", JSON.stringify(favorito_hinario));
     ons.notification.toast('Adicionado aos favoritos.', { buttonLabel: 'Ok', timeout: 1500 });
     return 'yellow';
   },
-  retirarFavorioHinario: function(hinario, id_hinario) {
+  retirarFavoritoHinario: function(hinario, id_hinario) {
     var array = JSON.parse(localStorage.getItem('lista-favorito-hinario') || '[]');
     for(var i=0; i<array.length; i++) {
       if (array[i]['hinario']) {
@@ -240,10 +254,10 @@ var app = {
     var favorito_hinario = JSON.parse(localStorage.getItem('lista-favorito-hinario') || '[]');
     localStorage.removeItem(favorito_hinario);
     localStorage.setItem("lista-favorito-hinario", JSON.stringify(array));
-    this.listaFavorioHinario();
+    this.listaFavoritoHinario();
     ons.notification.toast('Removido dos favoritos.', { buttonLabel: 'Ok', timeout: 1500 });
   },
-  listaFavorioHinario: function() {
+  listaFavoritoHinario: function() {
     var link = '';
     var descricao = '';
     var html_favoritos = '<p style="text-align: center">Nenhum favorito encontrado...</p>'
@@ -1020,27 +1034,37 @@ var app = {
     }
   },
   buscaNotificacoes: function(){
-    var uid = window.localStorage.getItem('uid');
+    var id_user = window.localStorage.getItem('id_user');
     var playerID = window.localStorage.getItem('playerID');
 
-    if (uid) {
-      firebase.database().ref('notificacoes').child(uid).on('value', (snapshot) => {
-        //localStorage.removeItem("lista-notificacoes");
-        var notificacoes = snapshot.val();
-        if (notificacoes) {
-          $.each(notificacoes, function (key, item) {
-            var hash = item['hash'];
-            var titulo = item['titulo'];
-            var mensagem = item['mensagem'];
-            var lido = item['lido'];
-            var data_notificacao = item['data_notificacao'];
-            var link = item['link'];
-            var app = item['app'];
-            lista_notificacao.push({id: hash, titulo: titulo, mensagem: mensagem, lido: lido, data_notificacao: data_notificacao, link: link});
-            localStorage.setItem("lista-notificacoes", JSON.stringify(lista_notificacao));
-          });
-          firebase.database().ref('notificacoes').child(uid).remove();
-        }
+    if (playerID && id_user) {
+      $.ajax({
+        url: "https://www.innovatesoft.com.br/webservice/app/buscaNotificacoes.php",
+        dataType: 'JSON',
+        type: 'GET',
+        data: {
+          'userId': playerID,
+          'id_user': id_user,
+          'app': 'nvi_v2',
+        },
+        error: function(e) {
+        },
+        success: function(notificacoes) {
+          //localStorage.removeItem("lista-notificacoes");
+          if (notificacoes) {
+            $.each(notificacoes, function (key, item) {
+              var hash = item['hash'];
+              var titulo = item['titulo'];
+              var mensagem = item['mensagem'];
+              var lido = item['lido'];
+              var data_notificacao = item['data_notificacao'];
+              var link = item['link'];
+              var app = item['app'];
+              lista_notificacao.push({id: hash, titulo: titulo, mensagem: mensagem, lido: lido, data_notificacao: data_notificacao, link: link});
+              localStorage.setItem("lista-notificacoes", JSON.stringify(lista_notificacao));
+            });
+          }
+        },
       });
     }
   },
@@ -1159,13 +1183,20 @@ var app = {
         },
         success: function(a) {
           if (a) {
+            window.localStorage.setItem("id_user", a['id_user']);
             window.localStorage.setItem("nome", a['nome']);
             window.localStorage.setItem("usuario", a['usuario']);
             window.localStorage.setItem("email", a['email']);
             window.localStorage.setItem("celular", a['celular']);
             window.localStorage.setItem("religiao", a['religiao']);
+            window.localStorage.setItem("conta", a['conta']);
             if (a['final_versao_pro'] == null) {
               a['final_versao_pro'] = 'NAO';
+              $("#btn_remover_anuncio").css("display","");
+            }
+            if (a['conta'] == 'google') {
+              $("#tela_home").css("display","");
+              $("#tela_login_google").css("display","none");
             }
             window.localStorage.setItem("versao_pro", a['final_versao_pro']);
           }

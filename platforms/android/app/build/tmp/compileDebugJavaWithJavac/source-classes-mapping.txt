@@ -13,12 +13,12 @@ org/apache/cordova/splashscreen/SplashScreen.java
 cordova/plugins/Diagnostic_Location.java
  cordova.plugins.Diagnostic_Location
  cordova.plugins.Diagnostic_Location$1
+com/adobe/phonegap/push/PushHandlerActivity.java
+ com.adobe.phonegap.push.PushHandlerActivity
 cordova/plugins/Diagnostic.java
  cordova.plugins.Diagnostic
  cordova.plugins.Diagnostic$1
  cordova.plugins.Diagnostic$2
-com/adobe/phonegap/push/PushHandlerActivity.java
- com.adobe.phonegap.push.PushHandlerActivity
 cordova/plugins/Diagnostic_Wifi.java
  cordova.plugins.Diagnostic_Wifi
 name/ratson/cordova/admob/interstitial/InterstitialExecutor.java
@@ -117,14 +117,14 @@ name/ratson/cordova/admob/Actions.java
 cordova/plugins/Diagnostic_Bluetooth.java
  cordova.plugins.Diagnostic_Bluetooth
  cordova.plugins.Diagnostic_Bluetooth$1
-com/verso/cordova/clipboard/Clipboard.java
- com.verso.cordova.clipboard.Clipboard
 com/adobe/phonegap/push/PushDismissedHandler.java
  com.adobe.phonegap.push.PushDismissedHandler
-cordova/plugins/Diagnostic_External_Storage.java
- cordova.plugins.Diagnostic_External_Storage
+com/verso/cordova/clipboard/Clipboard.java
+ com.verso.cordova.clipboard.Clipboard
 com/adobe/phonegap/push/BackgroundActionButtonHandler.java
  com.adobe.phonegap.push.BackgroundActionButtonHandler
+cordova/plugins/Diagnostic_External_Storage.java
+ cordova.plugins.Diagnostic_External_Storage
 com/adobe/phonegap/push/PushPlugin.java
  com.adobe.phonegap.push.PushPlugin
  com.adobe.phonegap.push.PushPlugin$1

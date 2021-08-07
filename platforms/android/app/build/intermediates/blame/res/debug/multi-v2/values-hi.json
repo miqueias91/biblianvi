@@ -1,44 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "/var/www/app/android/biblianvi/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hi/values-hi.xml",
+            "outputFile": "C:\\xampp\\htdocs\\biblianvi\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hi\\values-hi.xml",
             "map": [
                 {
-                    "source": "/home/miqueias/.gradle/caches/transforms-2/files-2.1/442c10f2caabfe74085c7c306694e15c/support-compat-27.1.1/res/values-hi/values-hi.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "45",
-                        "startColumns": "4",
-                        "startOffsets": "5237",
-                        "endColumns": "100",
-                        "endOffsets": "5333"
-                    }
-                },
-                {
-                    "source": "/home/miqueias/.gradle/caches/transforms-2/files-2.1/89942aa027505c58e3ade23dd3bf94e1/firebase-messaging-11.6.2/res/values-hi/values.xml",
+                    "source": "C:\\Users\\Innovate Solft\\.gradle\\caches\\transforms-2\\files-2.1\\3f080e308b94b003cb760a3dbea7bd34\\play-services-basement-11.6.2\\res\\values-hi\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
-                        "startOffsets": "243",
-                        "endColumns": "99",
-                        "endOffsets": "342"
+                        "startOffsets": "285",
+                        "endColumns": "205",
+                        "endOffsets": "490"
                     },
                     "to": {
-                        "startLines": "36",
+                        "startLines": "26",
                         "startColumns": "4",
-                        "startOffsets": "4467",
-                        "endColumns": "103",
-                        "endOffsets": "4566"
+                        "startOffsets": "2907",
+                        "endColumns": "205",
+                        "endOffsets": "3108"
                     }
                 },
                 {
-                    "source": "/home/miqueias/.gradle/caches/transforms-2/files-2.1/b19fee8e0df0faf5c1b0afb6807c97c8/appcompat-v7-27.1.1/res/values-hi/values-hi.xml",
+                    "source": "C:\\Users\\Innovate Solft\\.gradle\\caches\\transforms-2\\files-2.1\\b19fee8e0df0faf5c1b0afb6807c97c8\\appcompat-v7-27.1.1\\res\\values-hi\\values-hi.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -55,24 +38,41 @@
                     }
                 },
                 {
-                    "source": "/home/miqueias/.gradle/caches/transforms-2/files-2.1/f38179148f496d4b84c9437c6d7cc900/play-services-ads-11.6.2/res/values-hi/values.xml",
+                    "source": "C:\\Users\\Innovate Solft\\.gradle\\caches\\transforms-2\\files-2.1\\442c10f2caabfe74085c7c306694e15c\\support-compat-27.1.1\\res\\values-hi\\values-hi.xml",
                     "from": {
-                        "startLines": "4,5,6,7,8,9,10",
-                        "startColumns": "0,0,0,0,0,0,0",
-                        "startOffsets": "237,306,409,479,550,627,721",
-                        "endColumns": "68,102,69,70,76,93,73",
-                        "endOffsets": "305,408,478,549,626,720,794"
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
                     },
                     "to": {
-                        "startLines": "37,38,39,40,41,42,43",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "4571,4644,4751,4825,4900,4981,5079",
-                        "endColumns": "72,106,73,74,80,97,77",
-                        "endOffsets": "4639,4746,4820,4895,4976,5074,5152"
+                        "startLines": "45",
+                        "startColumns": "4",
+                        "startOffsets": "5237",
+                        "endColumns": "100",
+                        "endOffsets": "5333"
                     }
                 },
                 {
-                    "source": "/home/miqueias/.gradle/caches/transforms-2/files-2.1/cb030288a356491ab854f42d73421c49/play-services-base-11.6.2/res/values-hi/values.xml",
+                    "source": "C:\\Users\\Innovate Solft\\.gradle\\caches\\transforms-2\\files-2.1\\89942aa027505c58e3ade23dd3bf94e1\\firebase-messaging-11.6.2\\res\\values-hi\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "243",
+                        "endColumns": "99",
+                        "endOffsets": "342"
+                    },
+                    "to": {
+                        "startLines": "36",
+                        "startColumns": "4",
+                        "startOffsets": "4467",
+                        "endColumns": "103",
+                        "endOffsets": "4566"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Innovate Solft\\.gradle\\caches\\transforms-2\\files-2.1\\cb030288a356491ab854f42d73421c49\\play-services-base-11.6.2\\res\\values-hi\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -89,20 +89,20 @@
                     }
                 },
                 {
-                    "source": "/home/miqueias/.gradle/caches/transforms-2/files-2.1/3f080e308b94b003cb760a3dbea7bd34/play-services-basement-11.6.2/res/values-hi/values.xml",
+                    "source": "C:\\Users\\Innovate Solft\\.gradle\\caches\\transforms-2\\files-2.1\\f38179148f496d4b84c9437c6d7cc900\\play-services-ads-11.6.2\\res\\values-hi\\values.xml",
                     "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "285",
-                        "endColumns": "205",
-                        "endOffsets": "490"
+                        "startLines": "4,5,6,7,8,9,10",
+                        "startColumns": "0,0,0,0,0,0,0",
+                        "startOffsets": "237,306,409,479,550,627,721",
+                        "endColumns": "68,102,69,70,76,93,73",
+                        "endOffsets": "305,408,478,549,626,720,794"
                     },
                     "to": {
-                        "startLines": "26",
-                        "startColumns": "4",
-                        "startOffsets": "2907",
-                        "endColumns": "205",
-                        "endOffsets": "3108"
+                        "startLines": "37,38,39,40,41,42,43",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "4571,4644,4751,4825,4900,4981,5079",
+                        "endColumns": "72,106,73,74,80,97,77",
+                        "endOffsets": "4639,4746,4820,4895,4976,5074,5152"
                     }
                 }
             ]

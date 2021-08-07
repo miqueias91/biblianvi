@@ -23,6 +23,6 @@
 23    android:versionName="1.0" >
 24
 25    <uses-sdk android:minSdkVersion="16" />
-25-->/var/www/app/android/biblianvi/platforms/android/CordovaLib/AndroidManifest.xml
+25-->C:\xampp\htdocs\biblianvi\platforms\android\CordovaLib\AndroidManifest.xml
 26
 27</manifest>
